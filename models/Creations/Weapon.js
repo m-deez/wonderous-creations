@@ -1,20 +1,20 @@
-// MODELS Creation.js
-//  creation model  //
+// MODELS Weapon.js
+//  Weapon model  //
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const creationSchema = new Schema(
+const weaponSchema = new Schema(
     {
         name: { type: String, required: true },
-        rarity: { type: String, required: false },
-        type: { type: String, required: false },
-        damageDie: { type: Number, required: false },
+        rarity: { type: String, required: true },
+        weaponType: { type: String, required: true },
+        damageDie: { type: Number, required: true },
         element: { type: String, required: false },
         elementDamage: { type: Number, required: false },
         augment: { type: Number, required: false },
         image: { type: String, required: false },
-        physDescription: { type: String, required: false },
-        propertyDescription: { type: String, required: false },
+        physDescription: { type: String, required: true },
+        propertyDescription: { type: String, required: true },
 
         posts: [{ type: Schema.Types.ObjectId, ref: 'Post' }],
 
@@ -26,7 +26,7 @@ const creationSchema = new Schema(
 );
 
 //  model  //
-const Creation = mongoose.model('Creation', creationSchema);
+const Weapon = mongoose.model('Weapon', weaponSchema);
 
 //  export  //
-module.exports = Creation;
+module.exports = Weapon;

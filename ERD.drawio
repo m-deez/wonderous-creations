@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e">
     <diagram id="-iR5DneOQ1wKgiTfVXWQ" name="Page-1">
-        <mxGraphModel dx="1143" dy="790" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+        <mxGraphModel dx="683" dy="790" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -60,10 +60,13 @@
                     <mxGeometry y="26" width="160" height="144" as="geometry"/>
                 </mxCell>
                 <mxCell id="35" value="Weapon" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="1">
-                    <mxGeometry x="160" y="420" width="170" height="170" as="geometry"/>
+                    <mxGeometry x="160" y="420" width="160" height="170" as="geometry"/>
                 </mxCell>
                 <mxCell id="36" value="name: String&#10;rarity: String&#10;weapon type: String&#10;damage die: String&#10;element: String&#10;augment: number&#10;image: string&#10;physical description: String&#10;property description: String" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="35">
-                    <mxGeometry y="26" width="170" height="144" as="geometry"/>
+                    <mxGeometry y="26" width="160" height="144" as="geometry"/>
+                </mxCell>
+                <mxCell id="67" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="35" source="36" target="36">
+                    <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
                 <mxCell id="40" value="" style="edgeStyle=segmentEdgeStyle;endArrow=classic;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" target="27">
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
