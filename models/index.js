@@ -1,12 +1,18 @@
 // MODELS Index.js
 //  mongoose db configuration  //
 const mongoose = require('mongoose');
-const db = mongoose.connection;
 
-//const dbUrl = ' ';
-const configs = {
+// const dbUrl = 'mongodb://localhost:27017/wonderous-creations';
+
+mongoose.connect(process.env.DATABASE_URL , {
     useNewUrlParser: true,
     useCreateIndex: true,
     useUnifiedTopology: true,
     useFindAndModify: false,
-};
+});
+
+//  created by mongoose.connect  //
+const db = mongoose.connection;
+db.on('connected', function () {
+    console.log(`Mongoose connected to:${db.host}:${db.port}`);
+});
