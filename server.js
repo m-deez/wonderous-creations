@@ -8,7 +8,7 @@ const methodOverride = require('method-override');
 
 /* ===  internal modules  === */
 const indexRouter = require("./routes/index");
-const creationRouter = require("./router/creation");
+//const creationRouter = require("./router/creation");
 
 
 /* ===  instanced modules  === */
@@ -47,9 +47,8 @@ app.use((req, res, next) => {
 
 /* ===  routers & controllers  === */
 //  home route  //
-app.get('/', (req, res) => {
-    res.render('index');
-});
+app.use('/', indexRouter);
+//app.use('/creations', creationRouter)
 //  404 route  //
 app.get((req, res) => {
     res.send('404 error! Page not found');

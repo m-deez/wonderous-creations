@@ -17,7 +17,7 @@ function weapon(req, res) {
     })
 }
 
-module.export = {
+module.exports = {
     index,
     weapon,
 }
