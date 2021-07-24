@@ -7,7 +7,8 @@ const express = require('express');
 const methodOverride = require('method-override');
 
 /* ===  internal modules  === */
-
+const indexRouter = require("./routes/index");
+const creationRouter = require("./router/creation");
 
 
 /* ===  instanced modules  === */
