@@ -45,10 +45,7 @@ app.use((req, res, next) => {
 });
 
 /* ===  routers & controllers  === */
-//  home route  //
-app.get('/', (req, res) => {
-    res.render('index');
-});
+
 //  404 route  //
 app.get((req, res) => {
     res.send('404 error! Page not found');
