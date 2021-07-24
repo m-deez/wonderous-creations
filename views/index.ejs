@@ -10,5 +10,18 @@
 <body>
     <h1>Welcome Home</h1>
     
+    <a href = '' class = 'brand-logo left'>Dungeons & Dragons Logo</a>
+    <!--  place nav UI here  -->
+    <ul class = 'right'>
+        <li>
+        <li><a href = '/user'>See All Users</a></li>
+        <!--  new html below  -->
+        <% if (user) { %>
+            <a href = '/logout'><i class = 'material-icons left'>trending_flat</i>Log Out</a>
+        <% } else { %>
+            <a href = '/auth/google'><i class = 'material-icons left'>vpn_key</i>Login with Google</a>
+        <% } %>
+        </li>
+    </ul>
 </body>
 </html>

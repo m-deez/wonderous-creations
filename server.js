@@ -16,7 +16,7 @@ const app = express();
 /* ===  configuration  === */
 const PORT = 4000;
 app.set('view engine', 'ejs');
-require('./oauth/passport');
+require('./auth/passport');
 
 /* ===  middleware  === */
 //  body data middleware  //
@@ -37,7 +37,7 @@ app.use(passport.session());
 //  method override middleware  //
 app.use(methodOverride('__method'));
 //  serve public files  //
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static('/public'));
 //  will log requests  //
 app.use((req, res, next) => {
     console.log(req.url, res.method);
