@@ -14,12 +14,10 @@ const methodOverride = require('method-override');
 /* ===  instanced modules  === */
 const app = express();
 
-
 /* ===  configuration  === */
 const PORT = 4000;
 app.set('view engine', 'ejs');
 require('./oauth/passport');
-
 
 /* ===  middleware  === */
 //  body data middleware  //
