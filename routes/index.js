@@ -1,10 +1,10 @@
 // ROUTES index.js
 const express = require('express');
-const router = express.Router();
+const router = require('express').Router();
 const passport = require('passport');
 const indexControllers = require('../controllers/index');
 
-router.get('/', indexControllers.index);
+//router.get('/', indexControllers.index);
 router.get('/', function (req, res) {
     res.render('index', {
         user: req.user,
