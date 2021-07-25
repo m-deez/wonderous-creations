@@ -8,20 +8,12 @@
     <title>Dungeons & Dragons App</title>
 </head>
 <body>
-    <h1>Welcome Home</h1>
-    
-    <a href = '' class = 'brand-logo left'>Dungeons & Dragons Logo</a>
-    <!--  place nav UI here  -->
-    <ul class = 'right'>
-        <li>
-        <li><a href = '/user'>See All Users</a></li>
-        <!--  new html below  -->
+    <h1>Welcome to Wondrous Creations!</h1>
         <% if (user) { %>
-            <a href = '/logout'><i class = 'material-icons left'>trending_flat</i>Log Out</a>
+            <a href = '/logout'>Log Out</a>
         <% } else { %>
-            <a href = '/auth/google'><i class = 'material-icons left'>vpn_key</i>Login with Google</a>
+            <a href = '/auth/google'>Login with Google</a>
         <% } %>
-        </li>
-    </ul>
+    <a href="./creations/index">Create a new item!</a>
 </body>
 </html>
