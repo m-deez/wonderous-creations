@@ -16,7 +16,11 @@ db.on('connected', () => {
 });
 const creationSword = new Creation(
     {
-        name: { type: 'Sword', required: true },
+        name: 'Sword',
+    }
+
+    // {
+        // name: { type: 'String', required: true },
         // rarity: { type: String, required: false },
         // weaponType: { type: String, required: false },
         // damageDie: { type: 6, required: false },
@@ -32,12 +36,16 @@ const creationSword = new Creation(
         // propertyDescription: { type: String, required: false },
 
         // posts: [{ type: Schema.Types.ObjectId, ref: 'Post' }],
-    }
+    // }
 )
 
 const creationBauble = new Creation(
     {
-        name: { type: 'item', required: true },
+        name: 'Bauble',
+    }
+
+    // {
+    //     name: { type: 'String', required: true }
         // rarity: { type: String, required: false },
         // weaponType: { type: String, required: false },
         // damageDie: { type: Number, required: false },
@@ -53,7 +61,7 @@ const creationBauble = new Creation(
         // propertyDescription: { type: String, required: false },
 
         // posts: [{ type: Schema.Types.ObjectId, ref: 'Post' }],
-    }
+    // }
 )
 
 creationSword.save((err) =>{
