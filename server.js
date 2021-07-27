@@ -1,12 +1,12 @@
 // SERVER.js
 /* ===  .env  === */
-require('dotenv').config();
+//require('dotenv').config();
 
 /* ===  external modules  === */
 const express = require('express');
 const methodOverride = require('method-override');
-const passport = require('passport');
-const session = require('express-session');
+/*  const passport = require('passport');
+const session = require('express-session'); */
 
 /* ===  internal modules  === */
 const indexRouter = require('./routes/index');
@@ -20,23 +20,23 @@ const app = express();
 /* ===  configuration  === */
 const PORT = 4000;
 app.set('view engine', 'ejs');
-require('./auth/passport');
+//require('./auth/passport');
 
 /* ===  middleware  === */
 //  body data middleware  //
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 //  session middleware  //
-app.use(session(
+/* app.use(session(
     {
         secret: "dungeon sub",
         resave: false,
         saveUninitialized: true,
     })
-);
+); */
 //  passport middleware (oauth)  //
-app.use(passport.initialize());
-app.use(passport.session());
+/* app.use(passport.initialize());
+app.use(passport.session()); */
 //  method override middleware  //
 app.use(methodOverride('__method'));
 //  serve public files  //

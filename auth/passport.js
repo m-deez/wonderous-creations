@@ -1,4 +1,5 @@
 // AUTH passport.js
+/*
 const passport = require('passport');
 const GoogleStrategy = require('passport-google-oauth').OAuth2Strategy;
 const User = require('../models/User');
@@ -40,3 +41,4 @@ passport.deserializeUser(function (id, done) {
         done(err, user);
     });
 });
+*/
