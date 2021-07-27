@@ -8,9 +8,9 @@ const methodOverride = require('method-override');
 
 /* ===  internal modules  === */
 const indexRouter = require('./routes/index');
-const creationRouter = require("./routes/creations");
 const userRouter = require('./routes/users');
-const postRouter = require('./routes/posts');
+// const creationRouter = require('./routes/creations');
+// const postRouter = require('./routes/posts');
 
 /* ===  instanced modules  === */
 const app = express();
@@ -51,8 +51,8 @@ app.use((req, res, next) => {
 //  home route  //
 app.use('/', indexRouter);
 app.use('/users', userRouter);
-app.use('/posts', postRouter);
-app.use('/creations', creationRouter);
+// app.use('/creations', creationRouter);
+// app.use('/posts', postRouter);
 //  404 route  //
 app.get((req, res) => {
     res.send('404 error! Page not found');
