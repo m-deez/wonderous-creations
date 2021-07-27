@@ -16,7 +16,7 @@ db.on('connected', () => {
 });
 const creationSword = new Creation(
     {
-        name: { type: 'Sword', required: true }//,
+        name: { type: 'Sword', required: true },
         // rarity: { type: String, required: false },
         // weaponType: { type: String, required: false },
         // damageDie: { type: 6, required: false },
@@ -37,7 +37,7 @@ const creationSword = new Creation(
 
 const creationBauble = new Creation(
     {
-        name: { type: 'item', required: true }//,
+        name: { type: 'item', required: true },
         // rarity: { type: String, required: false },
         // weaponType: { type: String, required: false },
         // damageDie: { type: Number, required: false },

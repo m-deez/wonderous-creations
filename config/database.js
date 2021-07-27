@@ -2,9 +2,9 @@
 //  mongoose db configuration  //
 const mongoose = require('mongoose');
 
-// const dbUrl = ;
+// const dbUrl =
 
-mongoose.connect('mongodb://localhost/wondrous-creations', {
+mongoose.connect('mongodb://localhost:27017/wondrous-creations', {
     useNewUrlParser: true,
     useCreateIndex: true,
     useUnifiedTopology: true,

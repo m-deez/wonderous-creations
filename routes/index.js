@@ -1,16 +1,18 @@
 // ROUTES index.js
 const express = require('express');
 const router = express.Router();
-const passport = require('passport');
+//const passport = require('passport');
 const indexController = require('../controllers/index');
 
-//router.get('/', indexController.index);
+// router.get('/', indexController.index);
+
 router.get('/', function (req, res) {
     res.render('index', {
         user: req.user,
     });
 });
 
+/*
 //  google oauth login route  //
 router.get(
     '/auth/google',
@@ -29,5 +31,6 @@ router.get('/logout', function (req, res) {
     req.logout();
     res.redirect('/');
 });
-  
+*/
+
 module.exports = router;
