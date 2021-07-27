@@ -1,10 +1,10 @@
-// MODELS index.js
+// CONFIG database.js
 //  mongoose db configuration  //
 const mongoose = require('mongoose');
 
-// const dbUrl = 'mongodb://localhost:27017/wondrous-creations';
+// const dbUrl = ;
 
-mongoose.connect(process.env.DATABASE_URL, {
+mongoose.connect('mongodb://localhost/wondrous-creations', {
     useNewUrlParser: true,
     useCreateIndex: true,
     useUnifiedTopology: true,
@@ -13,8 +13,6 @@ mongoose.connect(process.env.DATABASE_URL, {
 
 //  created by mongoose.connect  //
 const db = mongoose.connection;
-db.on('connected', function () {
+db.on('connected', () => {
     console.log(`Mongoose connected to:${db.host}:${db.port}`);
 });
-
-module.exports = index;

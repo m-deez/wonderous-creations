@@ -21,11 +21,6 @@ const creationSchema = new Schema(
         propertyDescription: { type: String, required: false },
 
         posts: [{ type: Schema.Types.ObjectId, ref: 'Post' }],
-
-        votes: [{ type: Schema.Types.ObjectId, ref: 'Vote' }],
-    },
-    {
-        timestamps: false,
     }
 );
 
