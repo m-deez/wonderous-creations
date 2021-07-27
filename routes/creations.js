@@ -4,6 +4,6 @@ const router = express.Router();
 const creationController = require('../controllers/creations');
 
 router.get('/', creationController.index);
-router.get('/creations', creationController.weapon);
+router.post('/:id/creations/show', creationController.weapon)
 
 module.exports = router

@@ -5,6 +5,8 @@ require('dotenv').config();
 /* ===  external modules  === */
 const express = require('express');
 const methodOverride = require('method-override');
+const passport = require('passport');
+const session = require('express-session');
 
 /* ===  internal modules  === */
 const indexRouter = require('./routes/index');
@@ -25,7 +27,6 @@ require('./auth/passport');
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 //  session middleware  //
-const session = require('express-session');
 app.use(session(
     {
         secret: "dungeon sub",
@@ -34,7 +35,6 @@ app.use(session(
     })
 );
 //  passport middleware (oauth)  //
-const passport = require('passport');
 app.use(passport.initialize());
 app.use(passport.session());
 //  method override middleware  //

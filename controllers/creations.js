@@ -5,7 +5,7 @@ function index(req, res) {
     Creation.find({}, (err, creations) => {
         if (err)
             return res.send(err);
-            res.render("creations/index", {creations});
+            res.render("creations/show", {creations});
     })
 }
 
@@ -14,7 +14,7 @@ function weapon(req, res) {
     weapon.save((err) => {
         if(err)
         return res.send(err);
-        return res.redirect("/index")
+        return res.redirect("/creations/show")
     })
 }
 
