@@ -12,7 +12,7 @@
         <label>Select the weapon type!</label>
         <select type="text" name="armor-type">
             <option class="None" value="none" selected disabled hidden> -- -- -- </option>
-            <option class="simple-melee" value="spacer" disabled> -- Simple Melee Weapons -- </option>
+            <option class="spacer" value="spacer" disabled> -- Simple Melee Weapons -- </option>
             <option class="simple-melee" value="club">Club</option>
             <option class="simple-melee" value="dagger">Dagger</option>
             <option class="simple-melee" value="greatclub">Greatclub</option>
@@ -23,12 +23,12 @@
             <option class="simple-melee" value="quarterstaff">Quarterstaff</option>
             <option class="simple-melee" value="sickle">Sickle</option>
             <option class="simple-melee" value="spear">Spear</option>
-            <option class="simple-ranged" value="spacer" disabled> -- Simple Ranged Weapons -- </option>
+            <option class="spacer" value="spacer" disabled> -- Simple Ranged Weapons -- </option>
             <option class="simple-ranged" value="crossbow-light">Crossbow, light</option>
             <option class="simple-ranged" value="dart">Dart</option>
             <option class="simple-ranged" value="shortbow">Shortbow</option>
             <option class="simple-ranged" value="sling">Sling</option>
-            <option class="martial-melee" value="spacer" disabled> -- Martial Melee Weapons -- </option>
+            <option class="spacer" value="spacer" disabled> -- Martial Melee Weapons -- </option>
             <option class="martial-melee" value="battleaxe">Battleaxe</option>
             <option class="martial-melee" value="flail">Flail</option>
             <option class="martial-melee" value="glaive">Glaive</option>
@@ -47,7 +47,7 @@
             <option class="martial-melee" value="war-pick">War Pick</option>
             <option class="martial-melee" value="warhammer">Warhammer</option>
             <option class="martial-melee" value="whip">Whip</option>
-            <option class="martial-ranged" value="spacer" disabled> -- Martial Ranged Weapons -- </option>
+            <option class="spacer" value="spacer" disabled> -- Martial Ranged Weapons -- </option>
             <option class="martial-ranged" value="blowgun">Blowgun</option>
             <option class="martial-ranged" value="crossbow-hand">Crossbow, hand</option>
             <option class="martial-ranged" value="crossbow-heavy">Crossbow, heavy</option>
@@ -85,6 +85,7 @@
         </select>
         <p>d</p>
         <select>
+            <option class="none" value="none" selected disabled hidden> -- -- -- </option>
             <option class="ele-die" value="4">4</option>
             <option class="ele-die" value="6">6</option>
             <option class="ele-die" value="8">8</option>
@@ -113,11 +114,14 @@
         <label>Image</label>
         <input type="file">Upload an image of your weapon</p>
 
+        <label>Name: Name your dope ass weapon!</label>
+        <input type="text" class="name">
+
         <label>Physical Description: What does your weapon look like?</label>
-        <input type="text" id="physical-description">
+        <input type="text" class="physical-description">
 
         <label>Property Description: What does your weapon do?</label>
-        <input type="text" id="property-description">
+        <input type="text" class="property-description">
 
         <button type="submit">Create Your Weapon!</button>
     </form>

@@ -4,9 +4,86 @@
     <meta charset='UTF-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <meta name = 'viewport' content = 'width=device-width, initial-scale=1.0'>
-    <title>Other</title>
+    <title>New Other Item Page</title>
 </head>
 <body>
-    <h1>Wondrous Item</h1>
+    <h1>Other Wondrous Item Creation Page</h1>
+    <form action="/creations" method="POST">
+        <label>Select the item type!</label>
+        <select type="text" name="item-type">
+            <option class="None" value="none" selected disabled hidden> -- -- -- </option>
+            <option class="item" value="amulet">Amulet</option>
+            <option class="item" value="bag">Bag</option>
+            <option class="item" value="bead">Bead</option>
+            <option class="item" value="belt">Belt</option>
+            <option class="item" value="boots">Boots</option>
+            <option class="item" value="bracer">Bracer</option>
+            <option class="item" value="brooch">Brooch</option>
+            <option class="item" value="carpet">Carpet</option>
+            <option class="item" value="circlet">Circlet</option>
+            <option class="item" value="cloak">Cloak</option>
+            <option class="item" value="crystal-ball">Crystal Ball</option>
+            <option class="item" value="feather-token">Feather Token</option>
+            <option class="item" value="figurine">Figurine</option>
+            <option class="item" value="gloves">Gloves</option>
+            <option class="item" value="goggles">Goggles</option>
+            <option class="item" value="hat">Hat</option>
+            <option class="item" value="headband">Headband</option>
+            <option class="item" value="helm">Helm</option>
+            <option class="item" value="horn">Horn</option>
+            <option class="item" value="ioun-stone">Ioun Stone</option>
+            <option class="item" value="manual">Manual</option>
+            <option class="item" value="musical-instrument">Musical Instrument</option>
+            <option class="item" value="necklace">Necklace</option>
+            <option class="item" value="potion">Potion</option>
+            <option class="item" value="ring">Ring</option>
+            <option class="item" value="robe">Robe</option>
+            <option class="item" value="rod">Rod</option>
+            <option class="item" value="rope">Rope</option>
+            <option class="item" value="scroll">Scroll</option>
+            <option class="item" value="staff">Staff</option>
+            <option class="item" value="talisman">Talisman</option>
+            <option class="item" value="tome">Tome</option>
+            <option class="item" value="wand">Wand</option>
+            <option class="item" value="other">Other - ... </option>
+        </select>
+        <!--- If "other" is selected give the user a field to type in the type of item they want to make --->
+
+        <label>Item Slot</label>
+        <!--- I want this to auto populate when the item type is selected --->
+        <!--- If "other" is selected for item-type give the user a field to enter the item slot it takes up --->
+
+        <label>Select the rarity of your item</label>
+        <select type="text" name="item-rarity">
+            <option class="None" value="none" selected disabled hidden> -- -- -- </option>
+            <option class="Rarity" value="uncommon">Uncommon</option>
+            <option class="Rarity" value="rare">Rare</option>
+            <option class="Rarity" value="very-rare">Very Rare</option>
+            <option class="Rarity" value="legendary">Legendary</option>
+        </select>
+
+        <label>Select the augment of the item!</label>
+        <select type="text" name="item-augment">
+            <option class="None" value="none" selected disabled hidden> -- -- -- </option>
+            <option class="augment" value="none">None</option>
+            <option class="augment" value="+1">+1</option>
+            <option class="augment" value="+2">+2</option>
+            <option class="augment" value="+3">+3</option>
+        </select>
+
+        <label>Image</label>
+        <input type="file">Upload an image of your item</p>
+
+        <label>Name: Name your dope ass item!</label>
+        <input type="text" class="name">
+
+        <label>Physical Description: What does your item look like?</label>
+        <input type="text" class="physical-description">
+
+        <label>Property Description: What does your item do?</label>
+        <input type="text" class="property-description">
+
+        <button type="submit">Create Your item!</button>
+    </form>
 </body>
 </html>

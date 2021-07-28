@@ -17,14 +17,16 @@
     <!-- <a href = '/auth/google'>Login with Google</a> -->
 
     <% } %>
-    <a href="./creations/new">Create a new item!</a>
-    <a href="./creations">View all items!</a>
+    <nav>
+        <a href="./creations/new">Create a new item!</a>
+        <a href="./creations">View all items!</a>    
+    </nav>
 
-        <form action="/" method="POST">
-            <input type="text" placeholder="name" name="name">
-            <input type="text" placeholder="rarity" name="rarity">
-            <input type="text" placeholder="type" name="type">
-            <button type="submit">Submit</button>
-        </form>
+    <form action="/" method="POST">
+        <input type="text" placeholder="name" name="name">
+        <input type="text" placeholder="rarity" name="rarity">
+        <input type="text" placeholder="type" name="type">
+        <button type="submit">Submit</button>
+      </form>
 </body>
 </html>
