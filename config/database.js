@@ -18,5 +18,3 @@ db.on('connected', () => {
 db.on('error', err => {
     console.error('connection error:', err)
 })
-
-//  GIVE MATT THE NEW PASSWORD  //
