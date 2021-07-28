@@ -4,9 +4,125 @@
     <meta charset='UTF-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <meta name = 'viewport' content = 'width=device-width, initial-scale=1.0'>
-    <title>Weapon</title>
+    <title>New Weapon Page</title>
 </head>
 <body>
-    <h1>Weapon</h1>
+    <h1>Weapon Creation Page</h1>
+    <form action="/creations" method="POST">
+        <label>Select the weapon type!</label>
+        <select type="text" name="armor-type">
+            <option class="None" value="none" selected disabled hidden> -- -- -- </option>
+            <option class="simple-melee" value="spacer" disabled> -- Simple Melee Weapons -- </option>
+            <option class="simple-melee" value="club">Club</option>
+            <option class="simple-melee" value="dagger">Dagger</option>
+            <option class="simple-melee" value="greatclub">Greatclub</option>
+            <option class="simple-melee" value="handaxe">Handaxe</option>
+            <option class="simple-melee" value="javelin">Javelin</option>
+            <option class="simple-melee" value="light-hammer">Light Hammer</option>
+            <option class="simple-melee" value="mace">Mace</option>
+            <option class="simple-melee" value="quarterstaff">Quarterstaff</option>
+            <option class="simple-melee" value="sickle">Sickle</option>
+            <option class="simple-melee" value="spear">Spear</option>
+            <option class="simple-ranged" value="spacer" disabled> -- Simple Ranged Weapons -- </option>
+            <option class="simple-ranged" value="crossbow-light">Crossbow, light</option>
+            <option class="simple-ranged" value="dart">Dart</option>
+            <option class="simple-ranged" value="shortbow">Shortbow</option>
+            <option class="simple-ranged" value="sling">Sling</option>
+            <option class="martial-melee" value="spacer" disabled> -- Martial Melee Weapons -- </option>
+            <option class="martial-melee" value="battleaxe">Battleaxe</option>
+            <option class="martial-melee" value="flail">Flail</option>
+            <option class="martial-melee" value="glaive">Glaive</option>
+            <option class="martial-melee" value="greataxe">Greataxe</option>
+            <option class="martial-melee" value="greatsword">Greatsword</option>
+            <option class="martial-melee" value="halberd">Halberd</option>
+            <option class="martial-melee" value="lance">Lance</option>
+            <option class="martial-melee" value="longsword">Longsword</option>
+            <option class="martial-melee" value="maul">Maul</option>
+            <option class="martial-melee" value="morningstar">Morningstar</option>
+            <option class="martial-melee" value="pike">Pike</option>
+            <option class="martial-melee" value="rapier">Rapier</option>
+            <option class="martial-melee" value="scimitar">Scimitar</option>
+            <option class="martial-melee" value="shortsword">Shortsword</option>
+            <option class="martial-melee" value="trident">Trident</option>
+            <option class="martial-melee" value="war-pick">War Pick</option>
+            <option class="martial-melee" value="warhammer">Warhammer</option>
+            <option class="martial-melee" value="whip">Whip</option>
+            <option class="martial-ranged" value="spacer" disabled> -- Martial Ranged Weapons -- </option>
+            <option class="martial-ranged" value="blowgun">Blowgun</option>
+            <option class="martial-ranged" value="crossbow-hand">Crossbow, hand</option>
+            <option class="martial-ranged" value="crossbow-heavy">Crossbow, heavy</option>
+            <option class="martial-ranged" value="longbow">Longbow</option>
+            <option class="martial-ranged" value="net">Net</option>
+        </select>
+
+        <label>Weapon damage die</label>
+        <!--- I want this to auto populate when the weapon type is selected --->
+
+        <label>Select the elemental type of your weapon</label>
+        <select type="text" name="element">
+            <option class="none" value="none" selected disabled hidden> -- -- -- </option>
+            <option class="element" value="none">None</option>
+            <option class="element" value="acid">Acid</option>
+            <option class="element" value="cold">Cold</option>
+            <option class="element" value="fire">Fire</option>
+            <option class="element" value="force">Force</option>
+            <option class="element" value="lightning">Lightning</option>
+            <option class="element" value="necrotic">Necrotic</option>
+            <option class="element" value="poison">Poison</option>
+            <option class="element" value="psychic">Psychic</option>
+            <option class="element" value="radiant">Radiant</option>
+            <option class="element" value="thunder">Thunder</option>
+        </select>
+
+        <label>Select how much elemental damage your weapon does</label>
+        <select>
+            <option class="none" value="none" selected disabled hidden> -- -- -- </option>
+            <option class="ele-dam" value="1">1</option>
+            <option class="ele-dam" value="2">2</option>
+            <option class="ele-dam" value="3">3</option>
+            <option class="ele-dam" value="4">4</option>
+            <option class="ele-dam" value="5">5</option>
+        </select>
+        <p>d</p>
+        <select>
+            <option class="ele-die" value="4">4</option>
+            <option class="ele-die" value="6">6</option>
+            <option class="ele-die" value="8">8</option>
+            <option class="ele-die" value="10">10</option>
+            <option class="ele-die" value="12">12</option>
+        </select>
+
+        <label>Select the rarity of your weapon</label>
+        <select type="text" name="weapon-rarity">
+            <option class="None" value="none" selected disabled hidden> -- -- -- </option>
+            <option class="Rarity" value="uncommon">Uncommon</option>
+            <option class="Rarity" value="rare">Rare</option>
+            <option class="Rarity" value="very-rare">Very Rare</option>
+            <option class="Rarity" value="legendary">Legendary</option>
+        </select>
+
+        <label>Select the augment of the weapon!</label>
+        <select type="text" name="weapon-augment">
+            <option class="None" value="none" selected disabled hidden> -- -- -- </option>
+            <option class="augment" value="none">None</option>
+            <option class="augment" value="+1">+1</option>
+            <option class="augment" value="+2">+2</option>
+            <option class="augment" value="+3">+3</option>
+        </select>
+
+        <label>Image</label>
+        <input type="file">Upload an image of your weapon</p>
+
+        <label>Name: Name your dope ass weapon!</label>
+        <input type="text" class="name">
+
+        <label>Physical Description: What does your weapon look like?</label>
+        <input type="text" class="physical-description">
+
+        <label>Property Description: What does your weapon do?</label>
+        <input type="text" class="property-description">
+
+        <button type="submit">Create Your Weapon!</button>
+    </form>
 </body>
 </html>
