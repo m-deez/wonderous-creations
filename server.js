@@ -11,7 +11,7 @@ const session = require('express-session'); */
 /* ===  internal modules  === */
 const indexRouter = require('./routes/index');
 const userRouter = require('./routes/users');
-const creationRouter = require('./routes/creations');
+// const creationRouter = require('./routes/creations');
 // const postRouter = require('./routes/posts');
 
 /* ===  instanced modules  === */
@@ -51,7 +51,7 @@ app.use((req, res, next) => {
 //  home route  //
 app.use('/', indexRouter);
 app.use('/users', userRouter);
-app.use('/creations', creationRouter);
+// app.use('/creations', creationRouter);
 // app.use('/posts', postRouter);
 //  404 route  //
 app.get((req, res) => {

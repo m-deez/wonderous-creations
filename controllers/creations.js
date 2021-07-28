@@ -5,22 +5,28 @@ function index(req, res) {
     Creation.find({}, (err, creations) => {
         if (err)
             return res.send(err);
-            res.render("creations/index", {creations});
+            res.render('creations/index', {creations});
     })
 }
+function newCreation(req, res) {
+    let name = {Creation.name};
+    let rarity = {Creation.rarity};
+    let type = {};
+    res.render('creations/new', {})
+}
+
 
 function create(req, res) {
     const creation = new Creation(req.body);
     creation.save((err) => {
         if(err)
         return res.send(err);
-        return res.redirect("/creations")
+        return res.redirect('/creations')
     })
 }
 
 
 module.exports = {
     index,
-    creation,
     create,
 }

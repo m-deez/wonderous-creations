@@ -16,52 +16,44 @@ db.on('connected', () => {
 });
 const creationSword = new Creation(
     {
-        name: 'Sword',
-    }
-
-    // {
-        // name: { type: 'String', required: true },
-        // rarity: { type: String, required: false },
-        // weaponType: { type: String, required: false },
-        // damageDie: { type: 6, required: false },
-        // element: { type: String, required: false },
-        // elementDamage: { type: Number, required: false },
-        // armorType: { type: String, required: false },
-        // armorValue: { type: Number, required: false },
-        // itemType: { type: String, required: false },
-        // slot: { type: String, required: false },
-        // augment: { type: Number, required: false },
-        // image: { type: String, required: false },
-        // physDescription: { type: String, required: false },
-        // propertyDescription: { type: String, required: false },
+        name: 'sword',
+        rarity: 'rare',
+        weaponType: 'sword',
+        damageDie: 6,
+        element: 'water',
+        elementDamage: 3,
+        armorType: 'simple',
+        armorValue: 8,
+        itemType: 'defence',
+        slot: 'arm',
+        augment: 1,
+        image: 'blah',
+        physDescription: 'rusty',
+        propertyDescription: 'none',
 
         // posts: [{ type: Schema.Types.ObjectId, ref: 'Post' }],
-    // }
+    }
 )
 
 const creationBauble = new Creation(
     {
-        name: 'Bauble',
-    }
-
-    // {
-    //     name: { type: 'String', required: true }
-        // rarity: { type: String, required: false },
-        // weaponType: { type: String, required: false },
-        // damageDie: { type: Number, required: false },
-        // element: { type: String, required: false },
-        // elementDamage: { type: Number, required: false },
-        // armorType: { type: String, required: false },
-        // armorValue: { type: Number, required: false },
-        // itemType: { type: String, required: false },
-        // slot: { type: String, required: false },
-        // augment: { type: Number, required: false },
-        // image: { type: String, required: false },
-        // physDescription: { type: 'it is an item.', required: false },
-        // propertyDescription: { type: String, required: false },
+        name: 'bauble',
+        rarity: 'common',
+        weaponType: 'item',
+        damageDie: 0,
+        element: 'fire',
+        elementDamage: 3,
+        armorType: 'simple',
+        armorValue: 8,
+        itemType: 'defence',
+        slot: 'arm',
+        augment: 1,
+        image: 'blah',
+        physDescription: 'shiny',
+        propertyDescription: 'none',
 
         // posts: [{ type: Schema.Types.ObjectId, ref: 'Post' }],
-    // }
+    }
 )
 
 creationSword.save((err) =>{
