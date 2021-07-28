@@ -5,6 +5,8 @@
 /* ===  external modules  === */
 const express = require('express');
 const methodOverride = require('method-override');
+const MongoClient = require('mongodb').MongoClient
+require('./config/database');
 /*  const passport = require('passport');
 const session = require('express-session'); */
 
@@ -57,7 +59,10 @@ app.use('/users', userRouter);
 app.get((req, res) => {
     res.send('404 error! Page not found');
 });
-
+app.post('/', (req, res) => {
+    console.log(req.body)
+  })
+  
 /* ===  server listener  === */
 app.listen(PORT, () => {
     console.log(`Express is listening on PORT:${PORT}`);

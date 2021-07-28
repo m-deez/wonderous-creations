@@ -9,9 +9,9 @@ function index(req, res) {
     })
 }
 function newCreation(req, res) {
-    let name = {Creation.name};
-    let rarity = {Creation.rarity};
-    let type = {};
+    let name = { };
+    let rarity = { };
+    let type = { };
     res.render('creations/new', {})
 }
 
