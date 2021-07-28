@@ -7,23 +7,5 @@
     <title>Creations</title>
 </head>
 <body>
-    <h1>Creations</h1>
-
-    <table>
-        <tr>
-            <th>Item Name</th>
-            <th>Rarity</th>
-            <th>Type</th>
-        </tr>
-        <% creations.forEach(creation => { %>
-        <tr>
-            <td><%= creation.name %></td>
-            <td><%= creation.rarity %></td>
-            <td><%= creation.type %></td>
-            <td><a href='/creations/<%= creation._id %>'>Item Details</a></td>
-        </tr>
-        <% }) %>
-        
-    </table>
 </body>
 </html>

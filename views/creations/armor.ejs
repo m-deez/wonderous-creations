@@ -5,9 +5,64 @@
     <meta charset='UTF-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <meta name = 'viewport' content = 'width=device-width, initial-scale=1.0'>
-    <title>Armor</title>
+    <title>New Armor Page</title>
 </head>
 <body>
-    <h1>Armor</h1>
+    <h1>Armor Creation Page</h1>
+    <form action="/creations" method="POST">
+        <label>Select the armor type!</label>
+        <select type="text" name="armor-type">
+            <option class="None" value="none" selected disabled hidden> -- -- -- </option>
+            <option class="Light" value="spacer" disabled> -- Light Armor -- </option>
+            <option class="Light" value="padded">Padded</option>
+            <option class="Light" value="leather">Leather</option>
+            <option class="Light" value="studded-leather">Studded Leather</option>
+            <option class="Medium" value="spacer" disabled> -- Medium Armor -- </option>
+            <option class="Medium" value="hide">Hide</option>
+            <option class="Medium" value="chain-shirt">Chain Shirt</option>
+            <option class="Medium" value="scale-mail">Scale Mail</option>
+            <option class="Medium" value="breastplate">Breastplate</option>
+            <option class="Medium" value="half-plate">Half Plate</option>
+            <option class="Heavy" value="spacer" disabled> -- Heavy Armor -- </option>
+            <option class="Heavy" value="ring-mail">Ring Mail</option>
+            <option class="Heavy" value="chain-mail">Chain Mail</option>
+            <option class="Heavy" value="splint">Splint</option>
+            <option class="Heavy" value="plate">Plate</option>
+            <option class="Shield" value="spacer"> -- Shield -- </option>
+            <option class="Shield" value="shield">Shield</option>
+        </select>
+
+        <label>Armor Value</label>
+        <!--- I want this to auto populate when the armor type is selected --->
+
+        <label>Select the rarity of your armor</label>
+        <select type="text" name="armor-rarity">
+            <option class="None" value="none" selected disabled hidden> -- -- -- </option>
+            <option class="Rarity" value="uncommon">Uncommon</option>
+            <option class="Rarity" value="rare">Rare</option>
+            <option class="Rarity" value="very-rare">Very Rare</option>
+            <option class="Rarity" value="legendary">Legendary</option>
+        </select>
+
+        <label>Select the augment of the armor!</label>
+        <select type="text" name="armor-augment">
+            <option class="None" value="none" selected disabled hidden> -- -- -- </option>
+            <option class="augment" value="none">None</option>
+            <option class="augment" value="+1">+1</option>
+            <option class="augment" value="+2">+2</option>
+            <option class="augment" value="+3">+3</option>
+        </select>
+
+        <label>Image</label>
+        <input type="file">Upload an image of your armor</p>
+
+        <label>Physical Description: What does your armor look like?</label>
+        <input type="text" id="physical-description">
+
+        <label>Property Description: What does your armor do?</label>
+        <input type="text" id="property-description">
+
+        <button type="submit">Create Your Armor!</button>
+    </form>
 </body>
 </html>
