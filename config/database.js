@@ -1,9 +1,10 @@
 // CONFIG database.js
 //  mongoose db configuration  //
 const mongoose = require('mongoose');
+require('dotenv').config();
 
+mongoose.connect(process.env.DATABASE_URL, {
 
-mongoose.connect('mongodb+srv://ut-prosim:dung30nSubDandD@cluster0.maab0.mongodb.net/wondrous-creations?retryWrites=true&w=majority', {
     useNewUrlParser: true,
     useCreateIndex: true,
     useUnifiedTopology: true,
@@ -14,4 +15,7 @@ mongoose.connect('mongodb+srv://ut-prosim:dung30nSubDandD@cluster0.maab0.mongodb
 const db = mongoose.connection;
 db.on('connected', () => {
     console.log(`Mongoose connected to:${db.host}:${db.port}`);
-});
+})
+db.on('error', err => {
+    console.error('connection error:', err)
+})
