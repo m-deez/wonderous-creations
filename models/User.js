@@ -10,7 +10,6 @@ const userSchema = new Schema(
         googleId: String,
         creations: [{ type: Schema.Types.ObjectId, ref: 'Creation' }],
         posts: [{ type: Schema.Types.ObjectId, ref: 'Post' }],
-        votes: [{ type: Schema.Types.ObjectId, ref: 'Vote' }],
     },
     {
         timestamps: true,

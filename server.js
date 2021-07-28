@@ -5,13 +5,15 @@
 /* ===  external modules  === */
 const express = require('express');
 const methodOverride = require('method-override');
+const MongoClient = require('mongodb').MongoClient
+require('./config/database');
 /*  const passport = require('passport');
 const session = require('express-session'); */
 
 /* ===  internal modules  === */
 const indexRouter = require('./routes/index');
 const userRouter = require('./routes/users');
-const creationRouter = require('./routes/creations');
+// const creationRouter = require('./routes/creations');
 // const postRouter = require('./routes/posts');
 
 /* ===  instanced modules  === */
@@ -51,13 +53,16 @@ app.use((req, res, next) => {
 //  home route  //
 app.use('/', indexRouter);
 app.use('/users', userRouter);
-app.use('/creations', creationRouter);
+// app.use('/creations', creationRouter);
 // app.use('/posts', postRouter);
 //  404 route  //
 app.get((req, res) => {
     res.send('404 error! Page not found');
 });
-
+app.post('/', (req, res) => {
+    console.log(req.body)
+  })
+  
 /* ===  server listener  === */
 app.listen(PORT, () => {
     console.log(`Express is listening on PORT:${PORT}`);
