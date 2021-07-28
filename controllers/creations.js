@@ -5,20 +5,22 @@ function index(req, res) {
     Creation.find({}, (err, creations) => {
         if (err)
             return res.send(err);
-            res.render("creations/show", {creations});
+            res.render("creations/index", {creations});
     })
 }
 
-function weapon(req, res) {
-    const weapon = new Creation(req.body);
-    weapon.save((err) => {
+function create(req, res) {
+    const creation = new Creation(req.body);
+    creation.save((err) => {
         if(err)
         return res.send(err);
-        return res.redirect("/creations/show")
+        return res.redirect("/creations")
     })
 }
+
 
 module.exports = {
     index,
-    weapon,
+    creation,
+    create,
 }
