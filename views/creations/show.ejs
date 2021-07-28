@@ -9,5 +9,20 @@
 </head>
 <body>
     <h1>See all the user created items!</h1>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Item Type</th>
+            <th>Rarity</th>
+        </tr>
+        <% creations.forEach(creation => { %>
+        <tr>
+            <td> <%= creation.name %></td>
+            <td> <%= creation.weaponType || creation.armorType || creation.itemType %></td>
+            <td> <%= creation.rarity %></td>
+            <td><a href="/creations/<%= creation._id %>">View Details</a></td>
+        </tr>
+        <% }) %>
+    </table>
 </body>
 </html>
