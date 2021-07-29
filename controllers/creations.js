@@ -13,6 +13,18 @@ function newCreation(req, res) {
     res.render("creations/new", {})
 }
 
+function newWeapon(req, res) {
+    res.render("creations/weapon", {})
+}
+
+function newArmor(req, res) {
+    res.render("creations/armor", {})
+}
+
+function newOther(req, res) {
+    res.render("creations/other", {})
+}
+
 function create(req, res) {
     const creation = new Creation(req.body);
     creation.save((err) => {
@@ -26,4 +38,7 @@ module.exports = {
     show,
     create,
     newCreation,
+    newOther,
+    newArmor,
+    newWeapon,
 }
