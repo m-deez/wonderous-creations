@@ -34,6 +34,15 @@ function create(req, res) {
     })
 }
 
+function details(req, res) {
+    Creation.findById(req.params.id, (err, creation) => {
+        if (err) return res.send(err);
+        creation.save((err) => {
+            res.redirect(`/details/${creation._id}`);
+        })
+    })
+}
+
 module.exports = {
     show,
     create,
@@ -41,4 +50,5 @@ module.exports = {
     newOther,
     newArmor,
     newWeapon,
+    details,
 }
