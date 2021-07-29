@@ -8,9 +8,9 @@
 </head>
 <body>
     <h1>Weapon Creation Page</h1>
-    <form action="/creations" method="POST">
+    <form action="/show" method="POST">
         <label>Select the weapon type!</label>
-        <select type="text" name="armor-type">
+        <select type="text" name="weaponType">
             <option class="None" value="none" selected disabled hidden> -- -- -- </option>
             <option class="spacer" value="spacer" disabled> -- Simple Melee Weapons -- </option>
             <option class="simple-melee" value="club">Club</option>
@@ -75,7 +75,7 @@
         </select>
 
         <label>Select how much elemental damage your weapon does</label>
-        <select>
+        <select type="text" name="elementDamage">
             <option class="none" value="none" selected disabled hidden> -- -- -- </option>
             <option class="ele-dam" value="1">1</option>
             <option class="ele-dam" value="2">2</option>
@@ -94,7 +94,7 @@
         </select>
 
         <label>Select the rarity of your weapon</label>
-        <select type="text" name="weapon-rarity">
+        <select type="text" name="rarity">
             <option class="None" value="none" selected disabled hidden> -- -- -- </option>
             <option class="Rarity" value="uncommon">Uncommon</option>
             <option class="Rarity" value="rare">Rare</option>
@@ -103,7 +103,7 @@
         </select>
 
         <label>Select the augment of the weapon!</label>
-        <select type="text" name="weapon-augment">
+        <select type="text" name="augment">
             <option class="None" value="none" selected disabled hidden> -- -- -- </option>
             <option class="augment" value="none">None</option>
             <option class="augment" value="+1">+1</option>
@@ -112,16 +112,16 @@
         </select>
 
         <label>Image</label>
-        <input type="file">Upload an image of your weapon</p>
+        <input type="file" name="image">Upload an image of your weapon</p>
 
         <label>Name: Name your dope ass weapon!</label>
-        <input type="text" class="name">
+        <input type="text" name="name">
 
         <label>Physical Description: What does your weapon look like?</label>
-        <input type="text" class="physical-description">
+        <input type="text" name="physDescription">
 
         <label>Property Description: What does your weapon do?</label>
-        <input type="text" class="property-description">
+        <input type="text" name="propertyDescription">
 
         <button type="submit">Create Your Weapon!</button>
     </form>

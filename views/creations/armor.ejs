@@ -8,9 +8,9 @@
 </head>
 <body>
     <h1>Armor Creation Page</h1>
-    <form action="/creations" method="POST">
+    <form action="/show" method="POST">
         <label>Select the armor type!</label>
-        <select type="text" name="armor-type">
+        <select type="text" name="armorType">
             <option class="None" value="none" selected disabled hidden> -- -- -- </option>
             <option class="spacer" value="spacer" disabled> -- Light Armor -- </option>
             <option class="Light" value="padded">Padded</option>
@@ -35,7 +35,7 @@
         <!--- I want this to auto populate when the armor type is selected --->
 
         <label>Select the rarity of your armor</label>
-        <select type="text" name="armor-rarity">
+        <select type="text" name="rarity">
             <option class="None" value="none" selected disabled hidden> -- -- -- </option>
             <option class="Rarity" value="uncommon">Uncommon</option>
             <option class="Rarity" value="rare">Rare</option>
@@ -44,7 +44,7 @@
         </select>
 
         <label>Select the augment of the armor!</label>
-        <select type="text" name="armor-augment">
+        <select type="text" name="augment">
             <option class="None" value="none" selected disabled hidden> -- -- -- </option>
             <option class="augment" value="none">None</option>
             <option class="augment" value="+1">+1</option>
@@ -53,16 +53,16 @@
         </select>
 
         <label>Image</label>
-        <input type="file">Upload an image of your armor</p>
+        <input type="file" name="image">Upload an image of your armor</p>
 
         <label>Name: Name your dope ass armor!</label>
-        <input type="text" class="name">
+        <input type="text" name="name" class="name">
 
         <label>Physical Description: What does your armor look like?</label>
-        <input type="text" class="physical-description">
+        <input type="text" name="physDescription">
 
         <label>Property Description: What does your armor do?</label>
-        <input type="text" class="property-description">
+        <input type="text" name="propertyDescription">
 
         <button type="submit">Create Your Armor!</button>
     </form>

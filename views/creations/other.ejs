@@ -8,9 +8,9 @@
 </head>
 <body>
     <h1>Other Wondrous Item Creation Page</h1>
-    <form action="/creations" method="POST">
+    <form action="/show" method="POST">
         <label>Select the item type!</label>
-        <select type="text" name="item-type">
+        <select type="text" name="itemType">
             <option class="None" value="none" selected disabled hidden> -- -- -- </option>
             <option class="item" value="amulet">Amulet</option>
             <option class="item" value="bag">Bag</option>
@@ -54,7 +54,7 @@
         <!--- If "other" is selected for item-type give the user a field to enter the item slot it takes up --->
 
         <label>Select the rarity of your item</label>
-        <select type="text" name="item-rarity">
+        <select type="text" name="rarity">
             <option class="None" value="none" selected disabled hidden> -- -- -- </option>
             <option class="Rarity" value="uncommon">Uncommon</option>
             <option class="Rarity" value="rare">Rare</option>
@@ -63,7 +63,7 @@
         </select>
 
         <label>Select the augment of the item!</label>
-        <select type="text" name="item-augment">
+        <select type="text" name="augment">
             <option class="None" value="none" selected disabled hidden> -- -- -- </option>
             <option class="augment" value="none">None</option>
             <option class="augment" value="+1">+1</option>
@@ -72,16 +72,16 @@
         </select>
 
         <label>Image</label>
-        <input type="file">Upload an image of your item</p>
+        <input type="file" name="image">Upload an image of your item</p>
 
         <label>Name: Name your dope ass item!</label>
-        <input type="text" class="name">
+        <input type="text" name="name">
 
         <label>Physical Description: What does your item look like?</label>
-        <input type="text" class="physical-description">
+        <input type="text" name="physDescription">
 
         <label>Property Description: What does your item do?</label>
-        <input type="text" class="property-description">
+        <input type="text" name="propertyDescription">
 
         <button type="submit">Create Your item!</button>
     </form>
