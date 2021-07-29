@@ -14,7 +14,7 @@ function newCreation(req, res) {
 }
 
 function newWeapon(req, res) {
-    res.render("creations/weapon", {})
+    res.render('creations/weapon', {})
 }
 
 function newArmor(req, res) {
@@ -26,11 +26,11 @@ function newOther(req, res) {
 }
 
 function create(req, res) {
+    console.log(req.body)
     const creation = new Creation(req.body);
     creation.save((err) => {
-        if(err)
-        return res.send(err);
-        return res.redirect('/show')
+        if(err) return res.send(err);
+        return res.redirect('/show');
     })
 }
 
