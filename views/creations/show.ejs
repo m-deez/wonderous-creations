@@ -23,7 +23,7 @@
             <td> <%= creation.name %></td>
             <td> <%= creation.weaponType || creation.armorType || creation.itemType %></td>
             <td> <%= creation.rarity %></td>
-            <td><a href="/creations/<%= creation._id %>">View Details</a></td>
+            <td><a href="/details/<%= creation._id %>">View Details</a></td>
         </tr>
         <% }) %>
     </table>

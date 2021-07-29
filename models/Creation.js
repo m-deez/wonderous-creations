@@ -16,7 +16,7 @@ const creationSchema = new Schema(
         armorValue: { type: Number, required: false },
         itemType: { type: String, required: false },
         slot: { type: String, required: false },
-        augment: { type: Number, required: false },
+        augment: { type: String, required: false },
         image: { type: String, required: false },
         physDescription: { type: String, required: false },
         propertyDescription: { type: String, required: false },
