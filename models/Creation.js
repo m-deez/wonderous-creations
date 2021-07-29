@@ -6,6 +6,7 @@ const Schema = mongoose.Schema;
 const creationSchema = new Schema(
     {
         name: { type: String, required: true },
+        creationType: { type: String, required: false },
         rarity: { type: String, required: false },
         weaponType: { type: String, required: false },
         damageDie: { type: Number, required: false },
