@@ -1,20 +1,17 @@
 // CONTROLLERS creations.js
 const Creation = require('../models/Creation');
 
-function index(req, res) {
+function show(req, res) {
     Creation.find({}, (err, creations) => {
         if (err)
             return res.send(err);
             res.render('creations/show', {creations});
     })
 }
-function newCreation(req, res) {
-    let name = { };
-    let rarity = { };
-    let type = { };
-    res.render('creations/new', {})
-}
 
+function newCreation(req, res) {
+    res.render("creations/new", {})
+}
 
 function create(req, res) {
     const creation = new Creation(req.body);
@@ -25,8 +22,8 @@ function create(req, res) {
     })
 }
 
-
 module.exports = {
-    index,
+    show,
     create,
+    newCreation,
 }

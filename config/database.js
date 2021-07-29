@@ -1,15 +1,15 @@
 // CONFIG database.js
 //  mongoose db configuration  //
 const mongoose = require('mongoose');
-
-// const dbUrl =
+require('dotenv').config();
 
 mongoose.connect('mongodb://localhost:27017/wondrous-creations', {
+
     useNewUrlParser: true,
     useCreateIndex: true,
     useUnifiedTopology: true,
     useFindAndModify: false,
-});
+})
 
 //  created by mongoose.connect  //
 const db = mongoose.connection;

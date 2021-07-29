@@ -53,6 +53,7 @@ app.use((req, res, next) => {
 app.use('/', indexRouter);
 app.use('/users', userRouter);
 app.use('/show', creationRouter);
+app.use('/', creationRouter);
 // app.use('/posts', postRouter);
 //  404 route  //
 app.get((req, res) => {
