@@ -5,7 +5,7 @@ function index(req, res) {
     Creation.find({}, (err, creations) => {
         if (err)
             return res.send(err);
-            res.render('creations/index', {creations});
+            res.render('creations/show', {creations});
     })
 }
 function newCreation(req, res) {
@@ -21,7 +21,7 @@ function create(req, res) {
     creation.save((err) => {
         if(err)
         return res.send(err);
-        return res.redirect('/creations')
+        return res.redirect('/show')
     })
 }
 

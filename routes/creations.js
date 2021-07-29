@@ -5,8 +5,8 @@ const creationController = require('../controllers/creations');
 
 router.get('/', creationController.index);
 //router.get('/new', creationController.new);
-// router.get('/:id', creationController.show);
-router.post('/', creationController.create);
-router.post('/:id', creationController.add);
+//router.get('/show/:id', creationController.details);
+router.post('/creations', creationController.create);
+//router.post('/:id', creationController.add);
 
 module.exports = router;
