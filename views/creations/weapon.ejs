@@ -11,7 +11,7 @@
     <form action="/show" method="POST">
         <label>Select the weapon type!</label>
         <select type="text" name="weaponType">
-            <option class="None" value="none" selected disabled hidden> -- -- -- </option>
+            <option class="None" value="" selected disabled hidden> -- -- -- </option>
             <option class="spacer" value="spacer" disabled> -- Simple Melee Weapons -- </option>
             <option class="simple-melee" value="Club">Club</option>
             <option class="simple-melee" value="Dagger">Dagger</option>
@@ -60,8 +60,8 @@
 
         <label>Select the elemental type of your weapon</label>
         <select type="text" name="element">
-            <option class="none" value="none" selected disabled hidden> -- -- -- </option>
-            <option class="element" value="none">None</option>
+            <option class="none" value="" selected disabled hidden> -- -- -- </option>
+            <option class="element" value="">None</option>
             <option class="element" value="Acid">Acid</option>
             <option class="element" value="Cold">Cold</option>
             <option class="element" value="Fire">Fire</option>
@@ -76,26 +76,18 @@
 
         <label>Select how much elemental damage your weapon does</label>
         <select type="text" name="elementDamage">
-            <option class="none" value="none" selected disabled hidden> -- -- -- </option>
-            <option class="ele-dam" value="1">1</option>
-            <option class="ele-dam" value="2">2</option>
-            <option class="ele-dam" value="3">3</option>
-            <option class="ele-dam" value="4">4</option>
-            <option class="ele-dam" value="5">5</option>
-        </select>
-        <p>d</p>
-        <select>
-            <option class="none" value="none" selected disabled hidden> -- -- -- </option>
-            <option class="ele-die" value="4">4</option>
-            <option class="ele-die" value="6">6</option>
-            <option class="ele-die" value="8">8</option>
-            <option class="ele-die" value="10">10</option>
-            <option class="ele-die" value="12">12</option>
+            <option class="none" value="" selected disabled hidden> -- -- -- </option>
+            <option class="ele-dam" value="">None</option>
+            <option class="ele-dam" value="1d6">1d6</option>
+            <option class="ele-dam" value="2d6">2d6</option>
+            <option class="ele-dam" value="3d6">3d6</option>
+            <option class="ele-dam" value="4d6">4d6</option>
+            <option class="ele-dam" value="5d6">5d6</option>
         </select>
 
         <label>Select the rarity of your weapon</label>
         <select type="text" name="rarity">
-            <option class="None" value="none" selected disabled hidden> -- -- -- </option>
+            <option class="None" value="" selected disabled hidden> -- -- -- </option>
             <option class="Rarity" value="Uncommon">Uncommon</option>
             <option class="Rarity" value="Rare">Rare</option>
             <option class="Rarity" value="Very Rare">Very Rare</option>
@@ -104,15 +96,15 @@
 
         <label>Select the augment of the weapon!</label>
         <select type="text" name="augment">
-            <option class="None" value="none" selected disabled hidden> -- -- -- </option>
-            <option class="augment" value="none">None</option>
+            <option class="None" value="" selected disabled hidden> -- -- -- </option>
+            <option class="augment" value="">None</option>
             <option class="augment" value="+1">+1</option>
             <option class="augment" value="+2">+2</option>
             <option class="augment" value="+3">+3</option>
         </select>
 
-        <label>Image</label>
-        <input type="file" name="image">Upload an image of your weapon</p>
+        <!-- <label>Image</label>
+        <input type="file" name="image">Upload an image of your weapon</p> -->
 
         <label>Name: Name your dope ass weapon!</label>
         <input type="text" name="name">

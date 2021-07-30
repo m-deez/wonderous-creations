@@ -7,10 +7,17 @@
     <title>Creations Details Page</title>
 </head>
 <body>
-    <h1><strong>><%= creation.name %></strong</h1>
+    <h1><strong><%= creation.name %></strong</h1>
         <table>
             <tr>
-                <th></th>
+                <td><%= creation.image %></td>
+                <td><%= creation.augment %></td>
+                <td><%= creation.rarity %></td>
+                <td><%= creation.weaponType || creation.armorType || creation.itemType %></td>
+                <td><%= creation.elementDamage %></td>
+                <td><%= creation.element %></td>
+                <td><%= creation.physDescription %></td>
+                <td><%= creation.propertyDescription %></td>
             </tr>
         </table>
 </html>
