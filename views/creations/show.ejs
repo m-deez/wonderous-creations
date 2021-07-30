@@ -1,19 +1,12 @@
-<!-- VIEWS index.ejs -->
-<!DOCTYPE html>
-<html lang='en'>
-<head>
-    <meta charset='UTF-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <meta name = 'viewport' content = 'width=device-width, initial-scale=1.0'>
-    <title>Dungeons & Dragons App</title>
-</head>
-<body>
+
+<%- include('../partials/header.ejs') %>
+
     <h1>See all the user created items!</h1>
     <nav>
         <a href="/new">Create a new item!</a>
     </nav>
     <table>
-        <tr>
+        <tr class='table'>
             <th>Name</th>
             <th>Item Type</th>
             <th>Rarity</th>
@@ -27,5 +20,5 @@
         </tr>
         <% }) %>
     </table>
-</body>
-</html>
+
+<%- include('../partials/header.ejs') %>

@@ -1,17 +1,14 @@
-<!DOCTYPE html>
-<html lang='en'>
-<head>
-    <meta charset='UTF-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <meta name = 'viewport' content = 'width=device-width, initial-scale=1.0'>
-    <title>Creations</title>
-</head>
-<body>
+
+<%- include('../partials/header.ejs') %>
+
     <h1>Create your new item today!</h1>
      <!-- serve the page -->
     <h2>Select what type of item you would like to create below!</h2>
-    <button id="other"><a href="/weapon">Weapon</a></button>
-    <button id="other"><a href="/armor">Armor</a></button>
-    <button id="other"><a href="/other">Other</a></button>
-</body>
-</html>
+
+    <div class='buttons'>
+        <button class='other'><a href="/weapon">Weapon</a></button>
+        <button class='other'><a href="/armor">Armor</a></button>
+        <button class='other'><a href="/other">Other</a></button>
+    </div>
+
+<%- include('../partials/header.ejs') %>
