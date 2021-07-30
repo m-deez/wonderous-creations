@@ -9,6 +9,7 @@ body {
     font-family: 'Cormorant', serif;
     font-size: 22px;
     background-color: rgb(196, 196, 164);
+    margin: 12;
 }
 
 h2 {
@@ -19,21 +20,25 @@ h2 {
 
 button {
     font-family: 'Cormorant', serif;
+    font-size: 20px;
     background-color: white;
     text-decoration-color: green;
-    size: 30px;
+    border-width: 2px;
 }
 
 .buttons {
-    padding-inline: 20%;
+    padding-inline: 15%;
     margin-right: auto;
     margin-left: 15%;
 }
 
-.other {
-    display: inline-flex;
-    align-items: stretch;
-}
+table, th, td {
+    border: 1px solid black;
+  }
+
+  table {
+      width: 100%;
+  }
 
 .table {
     table-layout: auto;
