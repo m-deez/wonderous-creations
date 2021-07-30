@@ -9,7 +9,7 @@
     <form action="/show" method="POST">
         <label>Select the armor type!</label>
         <select type="text" name="armorType">
-            <option class="None" value="none" selected disabled hidden> -- -- -- </option>
+            <option class="None" value="" selected disabled hidden> -- -- -- </option>
             <option class="spacer" value="spacer" disabled> -- Light Armor -- </option>
             <option class="Light" value="Padded">Padded</option>
             <option class="Light" value="Leather">Leather</option>
@@ -29,12 +29,12 @@
             <option class="Shield" value="Shield">Shield</option>
         </select>
 
-        <label>Armor Value</label>
-        <!--- I want this to auto populate when the armor type is selected --->
+        <!--- <label>Armor Value</label>
+        I want this to auto populate when the armor type is selected --->
 
         <label>Select the rarity of your armor</label>
         <select type="text" name="rarity">
-            <option class="None" value="none" selected disabled hidden> -- -- -- </option>
+            <option class="None" value="" selected disabled hidden> -- -- -- </option>
             <option class="Rarity" value="Uncommon">Uncommon</option>
             <option class="Rarity" value="Rare">Rare</option>
             <option class="Rarity" value="Very Rare">Very Rare</option>
@@ -43,15 +43,15 @@
 
         <label>Select the augment of the armor!</label>
         <select type="text" name="augment">
-            <option class="None" value="none" selected disabled hidden> -- -- -- </option>
-            <option class="augment" value="none">None</option>
+            <option class="None" value="" selected disabled hidden> -- -- -- </option>
+            <option class="augment" value="">None</option>
             <option class="augment" value="+1">+1</option>
             <option class="augment" value="+2">+2</option>
             <option class="augment" value="+3">+3</option>
         </select>
 
-        <label>Image</label>
-        <input type="file" name="image">Upload an image of your armor</p>
+        <!-- <label>Image</label>
+        <input type="file" name="image">Upload an image of your armor</p> -->
 
         <label>Name: Name your dope ass armor!</label>
         <input type="text" name="name" class="name">

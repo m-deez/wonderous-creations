@@ -9,7 +9,7 @@ router.get('/weapon', creationController.newWeapon);
 router.get('/armor', creationController.newArmor);
 router.get('/other', creationController.newOther);
 router.post('/show', creationController.create)
-router.get('/details', creationController.details);
+router.get('/details/:id', creationController.details);
 //router.post('/:id', creationController.add);
 
 module.exports = router;
