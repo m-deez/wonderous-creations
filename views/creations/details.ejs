@@ -18,7 +18,7 @@
 
 
 <script src="../../controllers/creations.js"></script> 
-    <button id="update-button"><a href="/creations">Update <%= creation.name %></a></button>
-    <button id="delete-button" HTMLButton.onclick='deleteCreation()'></button>Delete <%= creation.name %></button>
+    <button id="update-button"><a href="/editCreation/<%= creation._id %>">Update <%= creation.name %></a></button>
+    <button id="delete-button"><a href='/delete/<%= creation._id %>'>Delete <%= creation.name %></a></button>
 
 <%- include('../partials/footer.ejs') %>

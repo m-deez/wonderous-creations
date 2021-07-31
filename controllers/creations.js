@@ -17,7 +17,14 @@ function newCreation(req, res) {
 }
 
 function newWeapon(req, res) {
-    res.render('creations/weapon', {})
+    if(req.params.id) {
+        Creation.findById(req.params.id, (err, creation) => {
+            if (err) return res.send(err);
+            res.render('creations/weapon', {creation})
+        })
+    } else {
+        res.render('creations/weapon', {creation: null})
+    }
 }
 
 function newArmor(req, res) {
@@ -50,20 +57,20 @@ function updateCreation(req, res) {
     Creation.findByIdAndUpdate(req.params.id, {
         name: req.body.name,
         rarity: req.body.rarity,
-        element: req.body.elememt,
-        elementDamage: req.body.elememtDamage,
+        element: req.body.element,
+        elementDamage: req.body.elementDamage,
         augment: req.body.augment,
         physDescription: req.body.physDescription,
         propertyDescription: req.body.propertyDescription,
     },
     (err, creation) => {
         if (err) return res.send(err);
-        res.render(`creations/${creation._id}/edit`, {creation});
+        res.redirect('/show');
     })
 }
 
 function deleteCreation(req, res) {
-    Creation.findByIdAndDelete(req.prams.id, (err) => {
+    Creation.findByIdAndRemove(req.params.id, (err) => {
         if (err) return res.send(err);
         console.log("successful delete")
         res.redirect("/show")
