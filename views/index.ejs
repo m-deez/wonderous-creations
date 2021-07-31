@@ -1,11 +1,5 @@
-<!-- VIEWS index.ejs -->
-<!DOCTYPE html>
-<html lang='en'>
-<head>
-    <title>Login</title>
-    <link href='/public/css/style.css' rel='stylesheet' type='text/css' />
-</head>
-<body>
+<%- include('./partials/header.ejs') %>
+
     <h1>Welcome to Wondrous Creations!</h1>
     <p>A user created data base of D&D 5th edition magic items! You can view all the items without an account, but you must sign-in to create items and comment on anything.</p>
     <% if (user) { %>
@@ -19,4 +13,5 @@
         <a href="/new">Create a new item!</a>
         <a href="/show">View all items!</a>    
     </nav>
-</html>
+
+<%- include('./partials/header.ejs') %>

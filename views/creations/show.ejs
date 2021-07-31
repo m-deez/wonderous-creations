@@ -1,17 +1,11 @@
-<!-- VIEWS index.ejs -->
-<!DOCTYPE html>
-<html lang='en'>
-<head>
-    <title>Dungeons & Dragons App</title>
-    <link href='/public/css/style.css' rel='stylesheet' type='text/css' />
-</head>
-<body>
+<%- include('../partials/header.ejs') %>
+
     <h1>See all the user created items!</h1>
     <nav>
         <a href="/new">Create a new item!</a>
     </nav>
     <table>
-        <tr>
+        <tr class='table'>
             <th>Name</th>
             <th>Item Type</th>
             <th>Rarity</th>
@@ -25,5 +19,5 @@
         </tr>
         <% }) %>
     </table>
-</body>
-</html>
+
+<%- include('../partials/header.ejs') %>

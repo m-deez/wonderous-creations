@@ -41,7 +41,7 @@ app.use(passport.session()); */
 //  method override middleware  //
 app.use(methodOverride('__method'));
 //  serve public files  //
-app.use(express.static('/public'));
+app.use(express.static(__dirname + '/public'));
 //  will log requests  //
 app.use((req, res, next) => {
     console.log(req.url, res.method);
@@ -59,9 +59,6 @@ app.use('/', creationRouter);
 app.get((req, res) => {
     res.send('404 error! Page not found');
 });
-app.post('/', (req, res) => {
-    console.log(req.body)
-  })
   
 /* ===  server listener  === */
 app.listen(PORT, () => {

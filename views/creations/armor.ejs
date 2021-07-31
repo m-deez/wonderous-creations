@@ -1,10 +1,5 @@
-<!DOCTYPE html>
-<html lang='en'>
-<head>
-    <title>New Armor Page</title>
-    <link href='/public/css/style.css' rel='stylesheet' type='text/css' />
-</head>
-<body>
+<%- include('../partials/header.ejs') %>
+
     <h1>Armor Creation Page</h1>
     <form action="/show" method="POST">
         <label>Select the armor type!</label>
@@ -79,5 +74,5 @@
         
         <button type="submit">Create Your Armor!</button>
     </form>
-</body>
-</html>
+
+<%- include('../partials/header.ejs') %>
