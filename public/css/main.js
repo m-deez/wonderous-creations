@@ -1,7 +1,6 @@
 const Creation = require("../../models/Creation");
-const updateCreation = require("../../models/Creation");
-
 const updateCreation = document.querySelector('#update-button');
+const deleteButton = documant.querrySelector('#delete-button');
 
 updateCreation.addEventListener('click', _ => {
     fetch('/details', {
@@ -40,6 +39,23 @@ app.put('/details', (req, res) => {
     .catch(error => console.error(error))
 })
 
-module.exports = {
-    updateCreation,
-}
+deleteButton.addEventListener('click', _ => {
+    fetch('/details', {
+        method: 'delete',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+            name: `${creation.name}`,
+        })
+    })
+    .then(res => {
+        if (res.ok) return res.jason();
+    })
+    .then(data => {
+        window.location.reload();
+    })
+})
+
+creations.deleteOne(
+    { name: `${creation.name}` },
+
+)

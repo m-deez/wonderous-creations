@@ -10,6 +10,7 @@ router.get('/armor', creationController.newArmor);
 router.get('/other', creationController.newOther);
 router.post('/show', creationController.create)
 router.get('/details/:id', creationController.details);
-router.get('/weapon/:id', creationController.updateCreation);
+router.get('creation/edit', creationController.updateCreation);
+//router.delete('/delete', creationController.deleteCreation);
 
 module.exports = router;

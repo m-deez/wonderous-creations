@@ -16,8 +16,8 @@
             </tr>
         </table>
 
-    <script scr="../../public/main.js"></script>
-    <button id="update-button">Update <%= creation.name %></button>
-    <button><a href="">Delete <%= creation.name %></a></button>
+<!--<script scr="../../public/main.js"></script>--> 
+    <button id="update-button"><a href="/creation/edit">Update <%= creation.name %></a></button>
+    <button id="delete-button" onclick='<%= deleteCreation(); %>'>Delete <%= creation.name %></button>
 
 <%- include('../partials/header.ejs') %>
