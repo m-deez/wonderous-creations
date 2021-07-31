@@ -2,7 +2,7 @@
 
 <%- include('../partials/header.ejs') %>
 
-    <h1><strong>><%= creation.name %></strong</h1>
+    <h1><strong><%= creation.name %></strong></h1>
 
         <table>
             <tr>
@@ -16,4 +16,8 @@
             </tr>
         </table>
 
-<%- include('../partials/footer.ejs') %>
+    <script scr="../../public/main.js"></script>
+    <button id="update-button">Update <%= creation.name %></button>
+    <button><a href="">Delete <%= creation.name %></a></button>
+
+<%- include('../partials/header.ejs') %>
