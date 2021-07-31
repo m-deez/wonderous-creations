@@ -1,10 +1,7 @@
-<!DOCTYPE html>
-<html lang='en'>
-<head>
-    <title>New Weapon Page</title>
-    <link href='/public/css/style.css' rel='stylesheet' type='text/css' />
-</head>
-<body>
+<!-- VIEWS/CREATIONS weapon.js -->
+
+<%- include('../partials/header.ejs') %>
+
     <h1>Weapon Creation Page</h1>
     <form action="/show" method="POST">
         <label>Select the weapon type!</label>
@@ -57,7 +54,7 @@
 
         <!--- <label>Weapon damage die</label>
                 I want this to auto populate when the weapon type is selected --->
-
+                
         <label>Select the elemental type of your weapon</label>
         <select type="text" name="element">
             <option class="none" value="" selected disabled hidden> -- -- -- </option>
@@ -134,5 +131,5 @@
 
         <button type="submit">Create Your Weapon!</button>
     </form>
-</body>
-</html>
+
+<%- include('../partials/footer.ejs') %>

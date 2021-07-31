@@ -1,11 +1,7 @@
-<!-- VIEWS index.ejs -->
-<!DOCTYPE html>
-<html lang='en'>
-<head>
-    <title>Login</title>
-    <link href='/public/css/style.css' rel='stylesheet' type='text/css' />
-</head>
-<body>
+<!-- VIEWS index.js -->
+
+<%- include('./partials/header.ejs') %>
+
     <h1>Welcome to Wondrous Creations!</h1>
     <p>A user created data base of D&D 5th edition magic items!</p>
     <% if (user) { %>
@@ -19,4 +15,5 @@
         <a href="/new">Create a new item!</a>
         <a href="/show">View all items!</a>    
     </nav>
-</html>
+
+<%- include('./partials/footer.ejs') %>

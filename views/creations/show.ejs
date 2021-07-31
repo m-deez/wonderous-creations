@@ -1,20 +1,17 @@
-<!-- VIEWS index.ejs -->
-<!DOCTYPE html>
-<html lang='en'>
-<head>
-    <title>Dungeons & Dragons App</title>
-    <link href='/public/css/style.css' rel='stylesheet' type='text/css' />
-</head>
-<body>
+<!-- VIEWS/CREATIONS show.js -->
+
+<%- include('../partials/header.ejs') %>
+
     <h1>See all the user created items!</h1>
     <nav>
         <a href="/new">Create a new item!</a>
     </nav>
+    <br>
     <table>
-        <tr>
-            <th>Name</th>
-            <th>Item Type</th>
-            <th>Rarity</th>
+        <tr class='table'>
+            <th><em>Name</em></th>
+            <th><em>Item Type</em></th>
+            <th><em>Rarity</em></th>
         </tr>
         <% creations.forEach(creation => { %>
         <tr>
@@ -25,5 +22,5 @@
         </tr>
         <% }) %>
     </table>
-</body>
-</html>
+
+<%- include('../partials/footer.ejs') %>

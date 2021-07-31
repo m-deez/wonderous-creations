@@ -1,7 +1,47 @@
-/* PUBLIC/CSS style.css */
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;1,400&display=swap" rel="stylesheet">
-font-family: 'Cormorant', serif;
 
+h1 {
+    font-family: 'Oleo Script', cursive;
+    text-align: center;
+    font-size: 60px;
+}
+
+body {
+    font-family: 'Cormorant', serif;
+    font-size: 22px;
+    background-color: rgb(196, 196, 164);
+    margin: 12;
+    background-image: /images/DNDWeapons3.5Ed1.jpg;
+}
+
+h2 {
+    font-family: 'Cormorant', serif;
+    text-align: center;
+    font-size: 30px;
+}
+
+button {
+    font-family: 'Cormorant', serif;
+    font-size: 20px;
+    background-color: white;
+    text-decoration-color: green;
+    border-width: 2px;
+}
+
+.buttons {
+    padding-inline: 15%;
+    margin-right: auto;
+    margin-left: 15%;
+}
+
+table, th, td {
+    border: 1px solid black;
+  }
+
+  table {
+      width: 100%;
+  }
+
+.table {
+    table-layout: auto;
+}

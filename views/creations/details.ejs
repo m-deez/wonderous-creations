@@ -1,19 +1,9 @@
-<<<<<<< Updated upstream
-<!DOCTYPE html>
-<html lang='en'>
-<head>
-    <title>Creations Details Page</title>
-    <link href='/public/css/style.css' rel='stylesheet' type='text/css' />
-<body>
-    <h1><strong><%= creation.name %></strong></h1>
-=======
 <!-- VIEWS/CREATIONS details.js -->
 
 <%- include('../partials/header.ejs') %>
 
     <h1><strong><%= creation.name %></strong></h1>
 
->>>>>>> Stashed changes
         <table>
             <tr>
                 <td><%= creation.augment %></td>
@@ -25,14 +15,9 @@
                 <td><%= creation.propertyDescription %></td>
             </tr>
         </table>
-<<<<<<< Updated upstream
-    <button id="update"><a href="/weapon/<%= creation._id %>">Update <%= creation.name %></a></button>
-    <button id="delete">Delete <%= creation.name %></button>
-</html>
-=======
+
     <script scr="../../public/main.js"></script>
     <button id="update-button">Update <%= creation.name %></button>
     <button><a href="">Delete <%= creation.name %></a></button>
 
 <%- include('../partials/header.ejs') %>
->>>>>>> Stashed changes
