@@ -1,11 +1,10 @@
-
 <%- include('../partials/header.ejs') %>
 
     <h1>Weapon Creation Page</h1>
     <form action="/show" method="POST">
         <label>Select the weapon type!</label>
         <select type="text" name="weaponType">
-            <option class="None" value="none" selected disabled hidden> -- -- -- </option>
+            <option class="None" value="" selected disabled hidden> -- -- -- </option>
             <option class="spacer" value="spacer" disabled> -- Simple Melee Weapons -- </option>
             <option class="simple-melee" value="Club">Club</option>
             <option class="simple-melee" value="Dagger">Dagger</option>
@@ -49,13 +48,15 @@
             <option class="martial-ranged" value="Net">Net</option>
         </select>
 
+        <br>
+
         <!--- <label>Weapon damage die</label>
                 I want this to auto populate when the weapon type is selected --->
 
         <label>Select the elemental type of your weapon</label>
         <select type="text" name="element">
-            <option class="none" value="none" selected disabled hidden> -- -- -- </option>
-            <option class="element" value="none">None</option>
+            <option class="none" value="" selected disabled hidden> -- -- -- </option>
+            <option class="element" value="">None</option>
             <option class="element" value="Acid">Acid</option>
             <option class="element" value="Cold">Cold</option>
             <option class="element" value="Fire">Fire</option>
@@ -68,54 +69,63 @@
             <option class="element" value="Thunder">Thunder</option>
         </select>
 
+        <br>
+
         <label>Select how much elemental damage your weapon does</label>
         <select type="text" name="elementDamage">
-            <option class="none" value="none" selected disabled hidden> -- -- -- </option>
-            <option class="ele-dam" value="1">1</option>
-            <option class="ele-dam" value="2">2</option>
-            <option class="ele-dam" value="3">3</option>
-            <option class="ele-dam" value="4">4</option>
-            <option class="ele-dam" value="5">5</option>
+            <option class="none" value="" selected disabled hidden> -- -- -- </option>
+            <option class="ele-dam" value="">None</option>
+            <option class="ele-dam" value="1d6">1d6</option>
+            <option class="ele-dam" value="2d6">2d6</option>
+            <option class="ele-dam" value="3d6">3d6</option>
+            <option class="ele-dam" value="4d6">4d6</option>
+            <option class="ele-dam" value="5d6">5d6</option>
         </select>
-        <p>d</p>
-        <select>
-            <option class="none" value="none" selected disabled hidden> -- -- -- </option>
-            <option class="ele-die" value="4">4</option>
-            <option class="ele-die" value="6">6</option>
-            <option class="ele-die" value="8">8</option>
-            <option class="ele-die" value="10">10</option>
-            <option class="ele-die" value="12">12</option>
-        </select>
+
+        <br>
 
         <label>Select the rarity of your weapon</label>
         <select type="text" name="rarity">
-            <option class="None" value="none" selected disabled hidden> -- -- -- </option>
+            <option class="None" value="" selected disabled hidden> -- -- -- </option>
             <option class="Rarity" value="Uncommon">Uncommon</option>
             <option class="Rarity" value="Rare">Rare</option>
             <option class="Rarity" value="Very Rare">Very Rare</option>
             <option class="Rarity" value="Legendary">Legendary</option>
         </select>
 
+        <br>
+
         <label>Select the augment of the weapon!</label>
         <select type="text" name="augment">
-            <option class="None" value="none" selected disabled hidden> -- -- -- </option>
-            <option class="augment" value="none">None</option>
+            <option class="None" value="" selected disabled hidden> -- -- -- </option>
+            <option class="augment" value="">None</option>
             <option class="augment" value="+1">+1</option>
             <option class="augment" value="+2">+2</option>
             <option class="augment" value="+3">+3</option>
         </select>
 
-        <label>Image</label>
-        <input type="file" name="image">Upload an image of your weapon</p>
+        <br>
 
-        <label>Name: Name your dope ass weapon!</label>
+        <!-- <label>Image</label>
+        <input type="file" name="image">Upload an image of your weapon</p> -->
+
+        <label>Name your dope ass weapon!</label>
+        <br>
         <input type="text" name="name">
 
+        <br>
+
         <label>Physical Description: What does your weapon look like?</label>
+        <br>
         <input type="text" name="physDescription">
 
+        <br>
+
         <label>Property Description: What does your weapon do?</label>
+        <br>
         <input type="text" name="propertyDescription">
+
+        <br>
 
         <button type="submit">Create Your Weapon!</button>
     </form>
