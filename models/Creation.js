@@ -3,23 +3,6 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-function update (req, res) {
-    Creation.findByIdAndUpdate(req.params.id, {
-        name: req.body.name,
-        image: req.body.image,
-        propertyDescription: req.body.propertyDescription,
-    }, function (err, user) {
-        if(err) res.send(err);
-        res.redirect('back');
-    })
-};
-
-function index (req, res) {
-    res.render('/index/profiles', {
-        user: req.user,
-    })
-};
-
 const creationSchema = new Schema(
     {
         name: { type: String, required: true },
@@ -41,7 +24,6 @@ const creationSchema = new Schema(
         posts: [{ type: Schema.Types.ObjectId, ref: 'Post' }],
     }
 );
-
 
 //  model  //
 const Creation = mongoose.model('Creation', creationSchema);

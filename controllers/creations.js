@@ -1,6 +1,9 @@
 // CONTROLLERS creations.js
 const Creation = require('../models/Creation');
 
+
+
+
 function show(req, res) {
     Creation.find({}, (err, creations) => {
         if (err)

@@ -2,18 +2,22 @@
 
 <%- include('./partials/header.ejs') %>
 
+<div class='image-mask-darken'>
     <h1>Welcome to Wondrous Creations!</h1>
+
     <p>A user created data base of D&D 5th edition magic items!</p>
+
     <% if (user) { %>
         <a href = '/logout'>Log Out</a>
     <% } else { %>
         
     <!-- <a href = '/auth/google'>Login with Google</a> -->
-
+</div>
     <% } %>
-    <nav>
-        <a href="/new">Create a new item!</a>
-        <a href="/show">View all items!</a>    
+<div class='home page'>
+    <nav class='home page'>
+    <a href="/new">Create a new item!</a>
+    <a href="/show">View all items!</a>    
     </nav>
-
+</div>
 <%- include('./partials/footer.ejs') %>
