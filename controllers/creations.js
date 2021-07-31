@@ -28,13 +28,26 @@ function newWeapon(req, res) {
 }
 
 function newArmor(req, res) {
-    res.render("creations/armor", {})
+    if(req.params.id) {
+        Creation.findById(req.params.id, (err, creation) => {
+            if (err) return res.send(err);
+            res.render('creations/armor', {creation})
+        })
+    } else {
+        res.render('creations/armor', {creation: null})
+    }
 }
 
 function newOther(req, res) {
-    res.render("creations/other", {})
+    if(req.params.id) {
+        Creation.findById(req.params.id, (err, creation) => {
+            if (err) return res.send(err);
+            res.render('creations/other', {creation})
+        })
+    } else {
+        res.render('creations/other', {creation: null})
+    }
 }
-
 function create(req, res) {
     console.log(req.body)
     const creation = new Creation(req.body);
@@ -57,6 +70,9 @@ function updateCreation(req, res) {
     Creation.findByIdAndUpdate(req.params.id, {
         name: req.body.name,
         rarity: req.body.rarity,
+        weaponType: req.body.weaponType,
+        armorType: req.body.armorType,
+        itemType: req.body.itemType,
         element: req.body.element,
         elementDamage: req.body.elementDamage,
         augment: req.body.augment,

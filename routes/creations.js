@@ -3,7 +3,9 @@ const express = require('express');
 const router = express.Router();
 const creationController = require('../controllers/creations');
 
-router.get('/editCreation/:id', creationController.newWeapon);
+router.get('/editWeapon/:id', creationController.newWeapon);
+router.get('/editArmor/:id', creationController.newArmor);
+router.get('/editOther/:id', creationController.newOther);
 router.get('/', creationController.show);
 router.get('/new', creationController.newCreation);
 router.get('/weapon', creationController.newWeapon);
