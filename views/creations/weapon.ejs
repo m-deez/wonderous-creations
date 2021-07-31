@@ -53,6 +53,8 @@
             <option class="martial-ranged" value="Net">Net</option>
         </select>
 
+        <br>
+
         <!--- <label>Weapon damage die</label>
                 I want this to auto populate when the weapon type is selected --->
 
@@ -72,6 +74,8 @@
             <option class="element" value="Thunder">Thunder</option>
         </select>
 
+        <br>
+
         <label>Select how much elemental damage your weapon does</label>
         <select type="text" name="elementDamage">
             <option class="none" value="" selected disabled hidden> -- -- -- </option>
@@ -83,6 +87,8 @@
             <option class="ele-dam" value="5d6">5d6</option>
         </select>
 
+        <br>
+
         <label>Select the rarity of your weapon</label>
         <select type="text" name="rarity">
             <option class="None" value="" selected disabled hidden> -- -- -- </option>
@@ -91,6 +97,8 @@
             <option class="Rarity" value="Very Rare">Very Rare</option>
             <option class="Rarity" value="Legendary">Legendary</option>
         </select>
+
+        <br>
 
         <label>Select the augment of the weapon!</label>
         <select type="text" name="augment">
@@ -101,17 +109,28 @@
             <option class="augment" value="+3">+3</option>
         </select>
 
+        <br>
+
         <!-- <label>Image</label>
         <input type="file" name="image">Upload an image of your weapon</p> -->
 
-        <label>Name: Name your dope ass weapon!</label>
+        <label>Name your dope ass weapon!</label>
+        <br>
         <input type="text" name="name">
 
+        <br>
+
         <label>Physical Description: What does your weapon look like?</label>
+        <br>
         <input type="text" name="physDescription">
 
+        <br>
+
         <label>Property Description: What does your weapon do?</label>
+        <br>
         <input type="text" name="propertyDescription">
+
+        <br>
 
         <button type="submit">Create Your Weapon!</button>
     </form>

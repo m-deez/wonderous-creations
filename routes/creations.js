@@ -10,6 +10,6 @@ router.get('/armor', creationController.newArmor);
 router.get('/other', creationController.newOther);
 router.post('/show', creationController.create)
 router.get('/details/:id', creationController.details);
-//router.post('/:id', creationController.add);
+router.get('/weapon/:id', creationController.updateCreation);
 
 module.exports = router;

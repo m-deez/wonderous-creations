@@ -43,6 +43,15 @@ function details(req, res) {
     })
 }
 
+function updateCreation(req, res) {
+    Creation.findByIdAndUpdate(req.params.id, (err, creation) => {
+        if (err) return res.send(err);
+        creation.update((err) => {
+            res.render(`creations/weapon/${creation._id}`, {creation});
+        })
+    })
+}
+
 module.exports = {
     show,
     create,
@@ -51,4 +60,5 @@ module.exports = {
     newArmor,
     newWeapon,
     details,
+    updateCreation,
 }
