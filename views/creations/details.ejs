@@ -1,6 +1,15 @@
 <!-- VIEWS/CREATIONS details.js -->
 
 <%- include('../partials/header.ejs') %>
+<% if (creation.weaponType) {
+    editCreation = "editWeapon"
+}
+if (creation.armorType) {
+    editCreation = "editArmor"
+}
+if (creation.itemType) {
+    editCreation = "editOther" 
+} %>
 
     <h1><strong><%= creation.name %></strong></h1>
 
@@ -16,9 +25,7 @@
             </tr>
         </table>
 
-
-<script src="../../controllers/creations.js"></script> 
-    <button id="update-button"><a href="/editOther/<%= creation._id %>">Update <%= creation.name %></a></button>
+    <button id="update-button"><a href="/<%= editCreation %>/<%= creation._id %>">Update <%= creation.name %></a></button>
     <button id="delete-button"><a href='/delete/<%= creation._id %>'>Delete <%= creation.name %></a></button>
 
 <%- include('../partials/footer.ejs') %>
