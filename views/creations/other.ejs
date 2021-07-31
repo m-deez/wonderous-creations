@@ -2,6 +2,101 @@
 
 <%- include('../partials/header.ejs') %>
 
+    <h1>Other Wondrous Item Update Page</h1>
+    <form method="POST" action="/show/<%= creation._id %>?_method=PUT">
+        <label>Select the item type!</label>
+        <select type="text" name="itemType">
+            <option class="None" value="" selected disabled hidden> -- -- -- </option>
+            <option class="item" value="Amulet">Amulet</option>
+            <option class="item" value="Bag">Bag</option>
+            <option class="item" value="Bead">Bead</option>
+            <option class="item" value="Belt">Belt</option>
+            <option class="item" value="Boots">Boots</option>
+            <option class="item" value="Bracer">Bracer</option>
+            <option class="item" value="Brooch">Brooch</option>
+            <option class="item" value="Carpet">Carpet</option>
+            <option class="item" value="Circlet">Circlet</option>
+            <option class="item" value="Cloak">Cloak</option>
+            <option class="item" value="Crystal Ball">Crystal Ball</option>
+            <option class="item" value="Feather Token">Feather Token</option>
+            <option class="item" value="Figurine">Figurine</option>
+            <option class="item" value="Gloves">Gloves</option>
+            <option class="item" value="Goggles">Goggles</option>
+            <option class="item" value="Hat">Hat</option>
+            <option class="item" value="Headband">Headband</option>
+            <option class="item" value="Helm">Helm</option>
+            <option class="item" value="Horn">Horn</option>
+            <option class="item" value="Ioun Stone">Ioun Stone</option>
+            <option class="item" value="Manual">Manual</option>
+            <option class="item" value="Musical Instrument">Musical Instrument</option>
+            <option class="item" value="Necklace">Necklace</option>
+            <option class="item" value="Potion">Potion</option>
+            <option class="item" value="Ring">Ring</option>
+            <option class="item" value="Robe">Robe</option>
+            <option class="item" value="Rod">Rod</option>
+            <option class="item" value="Rope">Rope</option>
+            <option class="item" value="Scroll">Scroll</option>
+            <option class="item" value="Staff">Staff</option>
+            <option class="item" value="Talisman">Talisman</option>
+            <option class="item" value="Tome">Tome</option>
+            <option class="item" value="Wand">Wand</option>
+            <!--<option class="item" value="Other">Other - ... </option>-->
+        </select>
+
+        <br>
+
+        <!--- If "other" is selected give the user a field to type in the type of item they want to make --->
+
+        <!--<label>Item Slot</label>-->
+        <!--- I want this to auto populate when the item type is selected --->
+        <!--- If "other" is selected for item-type give the user a field to enter the item slot it takes up --->
+
+        <label>Select the rarity of your item</label>
+        <select type="text" name="rarity">
+            <option class="None" value="" selected disabled hidden> -- -- -- </option>
+            <option class="Rarity" value="Uncommon">Uncommon</option>
+            <option class="Rarity" value="Rare">Rare</option>
+            <option class="Rarity" value="Very Rare">Very Rare</option>
+            <option class="Rarity" value="Legendary">Legendary</option>
+        </select>
+
+        <br>
+
+        <label>Select the augment of the item!</label>
+        <select type="text" name="augment">
+            <option class="None" value="" selected disabled hidden> -- -- -- </option>
+            <option class="augment" value="">None</option>
+            <option class="augment" value="+1">+1</option>
+            <option class="augment" value="+2">+2</option>
+            <option class="augment" value="+3">+3</option>
+        </select>
+
+        <br>
+
+        <!-- <label>Image</label>
+        <input type="file" name="image">Upload an image of your item</p> -->
+
+        <label>Name your dope ass item!</label>
+        <br>
+        <input type="text" name="name">
+
+        <br>
+
+        <label>Physical Description: What does your item look like?</label>
+        <br>
+        <input type="text" name="physDescription">
+
+        <br>
+
+        <label>Property Description: What does your item do?</label>
+        <br>
+        <input type="text" name="propertyDescription">
+
+        <br>
+
+        <button type="submit">Update Your item!</button>
+    </form>
+
     <h1>Other Wondrous Item Creation Page</h1>
     <form action="/show" method="POST">
         <label>Select the item type!</label>
