@@ -2,11 +2,22 @@
 
 <%- include('../partials/header.ejs') %>
 
-    <h1><strong>><%= creation.name %></strong</h1>
+    <h1><strong><%= creation.name %></strong></h1>
+
         <table>
             <tr>
-                <th></th>
+                <td><%= creation.augment %></td>
+                <td><%= creation.rarity %></td>
+                <td><%= creation.weaponType || creation.armorType || creation.itemType %></td>
+                <td><%= creation.elementDamage %></td>
+                <td><%= creation.element %></td>
+                <td><%= creation.physDescription %></td>
+                <td><%= creation.propertyDescription %></td>
             </tr>
         </table>
+
+<script src="../../controllers/creations.js"></script> 
+    <button id="update-button"><a href="/creations">Update <%= creation.name %></a></button>
+    <button id="delete-button" HTMLButton.onclick='deleteCreation()'></button>Delete <%= creation.name %></button>
 
 <%- include('../partials/footer.ejs') %>
