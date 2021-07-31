@@ -4,10 +4,9 @@
     <title>Creations Details Page</title>
     <link href='/public/css/style.css' rel='stylesheet' type='text/css' />
 <body>
-    <h1><strong><%= creation.name %></strong</h1>
+    <h1><strong><%= creation.name %></strong></h1>
         <table>
             <tr>
-                <td><%= creation.image %></td>
                 <td><%= creation.augment %></td>
                 <td><%= creation.rarity %></td>
                 <td><%= creation.weaponType || creation.armorType || creation.itemType %></td>
@@ -17,4 +16,6 @@
                 <td><%= creation.propertyDescription %></td>
             </tr>
         </table>
+    <button id="update"><a href="/weapon/<%= creation._id %>">Update <%= creation.name %></a></button>
+    <button id="delete">Delete <%= creation.name %></button>
 </html>
