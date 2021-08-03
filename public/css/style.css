@@ -4,6 +4,21 @@ h1 {
     font-family: 'Oleo Script', cursive;
     text-align: center;
     font-size: 60px;
+    color: red;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    content: "";
+}
+
+#welcome-page {
+    font-family: 'Cormorant', serif;
+    font-size: 22px;
+    background-color: rgb(196, 196, 164);
+    margin: 12;
+    background-image: url(/images/DNDWeapons35Ed1.jpg);
 }
 
 body {
@@ -11,7 +26,6 @@ body {
     font-size: 22px;
     background-color: rgb(196, 196, 164);
     margin: 12;
-    background-image: url(/images/DNDWeapons35Ed1.jpg);
 }
 
 .image-mask-darken {
@@ -22,7 +36,6 @@ body {
     align-items: center;
     position: relative;
     height: 100%; 
-    color: red;
     padding: 20px;
   }
   
@@ -69,14 +82,15 @@ table, th, td {
     table-layout: auto;
 }
 
-div.home-page {
-    text-align:center;
+.parent {
+    text-indent: 30%;
+    margin-top: 40px;
     }
-div.home-page {
-    display:inline;
+    .child {
+   text-indent: 30%;
+   margin-top: 40px;
 }
 
-div.home-page a {
-    text-decoration:none; 
-    padding: 0 30px center;
+#front-page {
+    text-align: center;
 }

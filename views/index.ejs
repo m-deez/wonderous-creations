@@ -5,7 +5,7 @@
 <div class='image-mask-darken'>
     <h1>Welcome to Wondrous Creations!</h1>
 
-    <p>A user created data base of D&D 5th edition magic items!</p>
+    <p id='front-page'>A user created data base of D&D 5th edition magic items!</p>
 
     <% if (user) { %>
         <a href = '/logout'>Log Out</a>
@@ -14,10 +14,12 @@
     <!-- <a href = '/auth/google'>Login with Google</a> -->
 </div>
     <% } %>
-<div class='home page'>
-    <nav class='home page'>
-    <a href="/new">Create a new item!</a>
-    <a href="/show">View all items!</a>    
-    </nav>
+<div class='parent'>
+    <div class='child'>
+        <nav class='home page'>
+            <a href="/new">Create a new item!</a>
+            <a href="/show">View all items!</a>    
+        </nav>
+    </div>
 </div>
 <%- include('./partials/footer.ejs') %>
