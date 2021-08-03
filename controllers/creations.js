@@ -92,6 +92,17 @@ function deleteCreation(req, res) {
     })
 }
 
+function newPost(req, res) {
+    if(req.params.id) {
+        Creation.posts.findById(req.params.id, (err, post) => {
+            if (err) return res.send(err);
+            res.render('creations/details/:id', {post})
+        })
+    } else {
+        res.render('creations/details/:id', {post: null})
+    }
+}
+
 module.exports = {
     show,
     create,
@@ -102,4 +113,5 @@ module.exports = {
     details,
     updateCreation,
     deleteCreation,
+    newPost,
 }
