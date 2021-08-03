@@ -44,6 +44,11 @@ if (creation.itemType) {
         <button type="submit">Post</button>
     </form>
 
-  
+    
+    <% creation.posts.forEach(post => { %>
+        <p><%= post.post %></p>
+        <p><%= post.createdAt %></p>
+        <% }) %>
+
 
 <%- include('../partials/footer.ejs') %>
