@@ -3,7 +3,7 @@
 <%- include('../partials/header.ejs') %>
 <% if (creation) { %> 
 
-    <h1>Armor Update Page</h1>
+    <h1 class='.image-mask-darken'>Armor Update Page</h1>
     <form method="POST" action="/show/<%= creation._id %>?_method=PUT">
         <label>Select the armor type!</label>
         <select type="text" name="armorType">
@@ -80,7 +80,7 @@
 
     <% } else { %>
 
-    <h1>Armor Creation Page</h1>
+    <h1 class='image-mask-darken'>Armor Creation Page</h1>
     <form action="/show" method="POST">
         <label>Select the armor type!</label>
         <select type="text" name="armorType">

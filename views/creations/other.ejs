@@ -3,7 +3,7 @@
 <%- include('../partials/header.ejs') %>
 <% if (creation) { %>
 
-    <h1>Wondrous Item Update Page</h1>
+    <h1 class='image-mask-darken'>Wondrous Item Update Page</h1>
     <form method="POST" action="/show/<%= creation._id %>?_method=PUT">
         <label>Select the item type!</label>
         <select type="text" name="itemType">
@@ -100,7 +100,7 @@
 
     <% } else { %> 
 
-    <h1>Wondrous Item Creation Page</h1>
+    <h1 class='image-mask-darken'>Wondrous Item Creation Page</h1>
     <form action="/show" method="POST">
         <label>Select the item type!</label>
         <select type="text" name="itemType">
