@@ -3,6 +3,15 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
+const postSchema = new Schema(
+    {
+        post: { type: String, required: true },
+    },
+    {
+        timestamps: true,
+    }
+);
+
 const creationSchema = new Schema(
     {
         name: { type: String, required: true },
@@ -21,7 +30,7 @@ const creationSchema = new Schema(
         physDescription: { type: String, required: false },
         propertyDescription: { type: String, required: false },
 
-        posts: [{ type: Schema.Types.ObjectId, ref: 'Post' }],
+        posts: [postSchema],
     }
 );
 
