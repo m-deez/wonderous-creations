@@ -10,13 +10,22 @@ h1 {
 #welcome-page {
     font-family: 'Cormorant', serif;
     font-size: 22px;
-    background-color: rgb(196, 196, 164);
+    background-color: rgb(241, 241, 212);
 }
 
 body {
     font-family: 'Cormorant', serif;
     font-size: 22px;
-    background-color: rgb(196, 196, 164);
+    background-color: rgb(241, 241, 212);
+}
+
+.paper-background {
+    background-image: url(https://cdn.hipwallpaper.com/i/34/46/uJEQ04.jpg);
+    background-position: center;
+    background-size: stretch;
+    justify-content: center;
+    align-items: center;
+    position: relative;
 }
 
 #image {
@@ -72,42 +81,31 @@ button {
 
 table, th, td {
     border: 1px solid black;
-  }
+}
 
-  table {
-      width: 100%;
-  }
+table {
+    width: 100%;
+}
 
 .table {
     table-layout: auto;
 }
 
-#parent {
+#nav {
     text-indent: 30%;
     margin-top: 15%;
-    }
-    #child {
-   text-indent: 30%;
 }
 
-.parent {
+.nav {
     text-indent: 35%;
-    margin-top: 80px;
-    }
-    .child {
-   text-indent: 35%;
-   margin-top: 80px;
-   font-size: 16px;
+    margin-top: 160px;
+    font-size: 16px;
 }
 
-.parent-new {
-    text-indent: 40%;
-    margin-top: 80px;
-    }
-    .child-new {
-   text-indent: 40%;
-   margin-top: 80px;
-   font-size: 16px;
+.nav-new {
+    text-indent: 45%;
+    margin-top: 160px;
+    font-size: 16px;
 }
 
 #front-page {
@@ -116,14 +114,14 @@ table, th, td {
 }
 
 #front-page-text {
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.822);
     padding: 2px;
 }
 
 #front-page-links {
     text-align: center;
     padding: 2px;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.822);
 }
 
 .links {
@@ -141,7 +139,7 @@ table, th, td {
  }
 
  .weapon {
-     background-image: url(/images/dragon-sword.jpeg);
+     background-image: url(/public/images/dragon-sword.jpeg);
      background-position: right;
-     background-size: initial;
+     background-size: 100%;
  }
