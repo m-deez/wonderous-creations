@@ -14,6 +14,15 @@ if (creation.itemType) {
     <h1 class='image-mask-darken'><strong><%= creation.name %></strong></h1>
 
         <table>
+            <tr class='table'>
+                <th><em>Augment</em></th>
+                <th><em>Rarity</em></th>
+                <th><em>Object Type</em></th>
+                <th><em>Element Damage</em></th>
+                <th><em>Element</em></th>
+                <th><em>Physical Description</em></th>
+                <th><em>Property Description</em></th>
+            </tr>
             <tr>
                 <td><%= creation.augment %></td>
                 <td><%= creation.rarity %></td>
@@ -34,7 +43,7 @@ if (creation.itemType) {
         <textarea name="post"></textarea>
         <button type="submit">Post</button>
     </form>
-    
-    <p><%= creation %></p>
+
+  
 
 <%- include('../partials/footer.ejs') %>
