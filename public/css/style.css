@@ -1,42 +1,42 @@
-
+/*  CSS style.css  */
 
 h1 {
     font-family: 'Oleo Script', cursive;
     text-align: center;
-    font-size: 60px;
+    font-size: 70px;
     color: red;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.4);
-    content: "";
 }
 
 #welcome-page {
     font-family: 'Cormorant', serif;
     font-size: 22px;
     background-color: rgb(196, 196, 164);
-    margin: 12;
-    background-image: url(/images/DNDWeapons35Ed1.jpg);
 }
 
 body {
     font-family: 'Cormorant', serif;
     font-size: 22px;
     background-color: rgb(196, 196, 164);
-    margin: 12;
 }
 
-.image-mask-darken {
+#image {
     background-image: url(/images/DNDWeapons35Ed1.jpg);
+    background-position: center center;
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    height: initial ; 
+  }
+
+.image-mask-darken {
     background-position: center center;
     background-size: cover;
     justify-content: center;
     align-items: center;
     position: relative;
     height: 100%; 
-    padding: 20px;
+
   }
   
 .image-mask-darken:after {
@@ -59,7 +59,7 @@ h2 {
 button {
     font-family: 'Cormorant', serif;
     font-size: 20px;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.822);
     text-decoration-color: green;
     border-width: 2px;
 }
@@ -82,15 +82,66 @@ table, th, td {
     table-layout: auto;
 }
 
-.parent {
+#parent {
     text-indent: 30%;
-    margin-top: 40px;
+    margin-top: 15%;
+    }
+    #child {
+   text-indent: 30%;
+}
+
+.parent {
+    text-indent: 35%;
+    margin-top: 80px;
     }
     .child {
-   text-indent: 30%;
-   margin-top: 40px;
+   text-indent: 35%;
+   margin-top: 80px;
+   font-size: 16px;
+}
+
+.parent-new {
+    text-indent: 40%;
+    margin-top: 80px;
+    }
+    .child-new {
+   text-indent: 40%;
+   margin-top: 80px;
+   font-size: 16px;
 }
 
 #front-page {
     text-align: center;
+    color: red;
 }
+
+#front-page-text {
+    background-color: white;
+    padding: 2px;
+}
+
+#front-page-links {
+    text-align: center;
+    padding: 2px;
+    background-color: white;
+}
+
+.links {
+    text-align: center;
+    padding: 2px;
+}
+
+#footer {
+    position:fixed;
+    left:0px;
+    bottom:0px;
+    height:30px;
+    width:100%;
+    background:#999;
+ }
+
+ .weapon {
+     background-image: url(/images/dragon-sword.jpeg);
+     background-position: right;
+     background-size: initial;
+ }

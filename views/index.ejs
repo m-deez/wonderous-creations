@@ -1,25 +1,40 @@
 <!-- VIEWS index.js -->
 
-<%- include('./partials/header.ejs') %>
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name = 'viewport' content = 'width=device-width, initial-scale=1.0'>
+    <link rel='stylesheet' type='text/css' href='/css/style.css' />
+    <link rel='preconnect' href='https://fonts.googleapis.com'>
+    <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;1,400&family=Oleo+Script&display=swap" rel='stylesheet'>
+    <title>Dungeons & Dragons App</title>
+</head>
+<body id='welcome-page'>
+    <div id='image'>
+        <div class='image-mask-darken'>
+            <h1>Welcome to Wondrous Creations!</h1>
 
-<div class='image-mask-darken'>
-    <h1>Welcome to Wondrous Creations!</h1>
+            <p id='front-page'><span id='front-page-text'>A user created data base of D&D 5th edition magic items!</span></p>
 
-    <p id='front-page'>A user created data base of D&D 5th edition magic items!</p>
+            <!-- <% if (user) { %>
+                <a href = '/logout'>Log Out</a>
+            <% } else { %> -->
+                
+            <!-- <a href = '/auth/google'>Login with Google</a> -->
+        </div>
+            <!-- <% } %> -->
 
-    <% if (user) { %>
-        <a href = '/logout'>Log Out</a>
-    <% } else { %>
-        
-    <!-- <a href = '/auth/google'>Login with Google</a> -->
-</div>
-    <% } %>
-<div class='parent'>
-    <div class='child'>
-        <nav class='home page'>
-            <a href="/new">Create a new item!</a>
-            <a href="/show">View all items!</a>    
-        </nav>
-    </div>
-</div>
-<%- include('./partials/footer.ejs') %>
+        <div id='parent' class='footer'>
+            <div id='child'>
+                <footer>
+                    <a href="/new" id='front-page-links'>Create a new item!</a>
+                    <a href="/show" id='front-page-links'>View all items!</a>    
+                </footer>
+            </div>
+        </div>
+    </div> 
+</body>
+</html>
