@@ -28,4 +28,11 @@ if (creation.itemType) {
     <button id="update-button"><a href="/<%= editCreation %>/<%= creation._id %>">Update <%= creation.name %></a></button>
     <button id="delete-button"><a href='/delete/<%= creation._id %>'>Delete <%= creation.name %></a></button>
 
+    <form method="POST" action="/details/<%= creation._id %>?">
+        <label>Leave some constructive feed back for the creator</label>
+        <br>
+        <textarea name="post"></textarea>
+        <button type="submit">Post</button>
+    </form>
+
 <%- include('../partials/footer.ejs') %>

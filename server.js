@@ -13,6 +13,7 @@ const session = require('express-session'); */
 const indexRouter = require('./routes/index');
 const userRouter = require('./routes/users');
 const creationRouter = require('./routes/creations');
+const postRouter = require('./routes/posts');
 // const postRouter = require('./routes/posts');
 
 /* ===  instanced modules  === */
@@ -54,7 +55,7 @@ app.use('/', indexRouter);
 app.use('/users', userRouter);
 app.use('/show', creationRouter);
 app.use('/', creationRouter);
-// app.use('/posts', postRouter);
+app.use('/details', postRouter);
 //  404 route  //
 app.get((req, res) => {
     res.send('404 error! Page not found');
