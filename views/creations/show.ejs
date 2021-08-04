@@ -15,9 +15,9 @@
         </tr>
         <% creations.forEach(creation => { %>
         <tr>
-            <td> <%= creation.name %></td>
-            <td> <%= creation.weaponType || creation.armorType || creation.itemType %></td>
-            <td> <%= creation.rarity %></td>
+            <td> <strong> <%= creation.name %> </strong> </td>
+            <td> <strong> <%= creation.weaponType || creation.armorType || creation.itemType %> </strong> </td>
+            <td> <strong> <%= creation.rarity %> </strong> </td>
             <td><a href="/details/<%= creation._id %>">View Details</a></td>
         </tr>
         <% }) %>
